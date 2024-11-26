@@ -23,7 +23,7 @@ function App() {
       </section>
 
       <section className="second">
-        
+
       </section>
     </>
   )
