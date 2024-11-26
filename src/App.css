@@ -7,6 +7,8 @@
 body {
   margin: 0;
   font-family: 'Outfit';
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 section {
@@ -104,5 +106,82 @@ section.second {
   border-top:1px solid hsl(0, 0%, 80%);
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(.25rem);
+  display:flex;
+  padding:11.25rem 0;
+  flex-wrap: wrap;
 }
 
+section.second div.text-container, section.second div.photo-container  {
+  flex:1;
+  height:100%;
+  min-width:500px;
+}
+
+section.second .photo-container {
+  background-color:var(--blue);
+}
+
+section.second .text-container {
+  color:var(--blue);
+  display:flex;
+  justify-content:center;
+}
+
+section.second .text-container .text-content {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:80%;
+  gap:2rem;
+}
+
+section.second .text-container h1 {
+  margin:0;
+  line-height:2em;
+  width:60%;
+  min-width: 250px;
+  border-bottom:solid 1px var(--blue);
+  font-size:2rem;
+  max-width:300px;
+}
+
+section.second .text-container p {
+  font-size:1.125rem;
+  width:90%;
+  max-width:40ch;
+}
+
+section.second .text-container p span {
+  font-weight:600;
+}
+
+section.second .photo-container {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem 0;
+}
+
+section.second .photo-container .photo-content {
+  width:80%;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  color:#fff;
+  flex-wrap:wrap;
+}
+
+section.second .photo-container .photo-content h1 {
+  border-left:2px solid hsl(0, 0%, 52%);
+  padding-left:.8rem;
+  line-height:1.2em;
+  font-size:2rem;
+  font-weight:600;
+  width:300px;
+}
+
+section.second img {
+  width:350px;
+  height:340px;
+  box-shadow:-24px -1.75rem 0px hsl(0, 0%, 52%);
+}
