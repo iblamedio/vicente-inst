@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+
 import './App.css';
 import './mobile.css';
 
@@ -11,7 +13,9 @@ function App() {
 
   return (
     <>
+
       <Header/>
+
       <section className="first">
         <div className="content">
           <h1>Priorizamos a excelência em cada um de nossos empreendimentos.</h1>
@@ -48,6 +52,68 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className="third">
+        <motion.div  
+          transition={{ duration: 0.8, ease: "circInOut" }} 
+          initial={{opacity:0, x:-300}} 
+          whileInView={{opacity:1, x:0}} 
+          viewport={{once:true}} 
+          className="card"
+        >
+          <img src={aruna} alt="Aruna" />
+          <div className="text">
+            <h1>Aruna Tower Residence</h1>
+            <p>A fachada do Aruna Tower Residence é marcante e imponente, 
+              com acabamento cerâmico que se estende até a garagem e iluminação 
+              em LED que realça sua beleza.</p>
+              <button>Saiba Mais</button>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          transition={{ duration: 0.8, ease: "circInOut" }} 
+          initial={{opacity:0, x:300}} 
+          whileInView={{opacity:1, x:0}} 
+          viewport={{once:true}} 
+          className="card"
+        >
+          <img src={vicente} alt="Vicente" />
+          <div className="text">
+            <h1>Residencial Vicente</h1>
+            <p>
+              Vicente Residencial está localizado na Meia
+              Praia, este empreendimento oferece uma
+              posição estratégica e acesso conveniente às
+              principais comodidades da região.<br/><br/>
+              Sua fachada exibe uma combinação de pintura
+              de alta qualidade, volumetria em material leve
+              como EPS e sofisticados detalhes em pele de
+              vidro, criando um design moderno e elegante.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          transition={{ duration: 0.8, ease: "circInOut" }} 
+          initial={{opacity:0, x:-300}} 
+          whileInView={{opacity:1, x:0}} 
+          viewport={{once:true}} 
+          className="card"
+        >
+          <img src={mariaDolores} alt="Maria Dolores" />
+          <div className="text">
+            <h1>Residencial Maria Dolores</h1>
+            <p>
+              O Residencial Maria Dolores, o primeiro projeto da Vicente 
+              Empreendimentos, foi entregue no final de 2021/2022 e homenageia 
+              a mãe de Alencar, marcando um grande sucesso.
+            </p>
+          </div>
+        </motion.div>
+
+      </section>
+
     </>
   )
 }

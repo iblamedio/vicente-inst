@@ -13,6 +13,26 @@
     }
 }
 
+@media (max-width:700px) {
+    section.third .card {
+        width:90% !important;
+        margin:auto;
+    }
+    section.third button {
+        margin:1.5em auto 0;
+        text-wrap:nowrap;
+    }
+    section.third .text {
+        width:90%;
+    }
+    section.third h1 {
+        width:100%;
+    }
+    section.third p {
+        width:100%;
+    }
+}
+
 @media (max-width:600px) {
     section.first img {
       width:180px;
@@ -23,6 +43,12 @@
 @media (max-width:500px) {
     section.second div.text-container, section.second div.photo-container {
         min-width: 250px !important;
+    }
+    section.third h1 {
+        font-size:1.25rem;
+    }
+    section.third p {
+        font-size:1rem;
     }
 }
 
@@ -40,6 +66,13 @@
     }
     section.second {
         padding-top:5rem;
+    }
+    section.third img {
+        width:220px;
+        height:272px;
+    }
+    section.third button {
+        width:100%;
     }
 }
 
