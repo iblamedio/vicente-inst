@@ -1,4 +1,8 @@
+import { useRef, useState } from 'react';
 import { motion } from 'motion/react';
+import InputMask from '@mona-health/react-input-mask';
+import toast, { Toaster } from "react-hot-toast";
+import emailjs from '@emailjs/browser';
 
 import './App.css';
 import './mobile.css';
@@ -16,8 +20,92 @@ import mailIcon from './assets/mail.svg';
 
 function App() {
 
+  const envServiceId: string = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+  const envTemplateId: string = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+  const envPublicKey: string = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
+
+  const [isLoading, setLoading] = useState(false);
+
+  const form: any = useRef();
+
+    const [nameErr, setNameErr] = useState(false);
+    const [emailErr, setEmailErr] = useState(false);
+    const [phoneErr, setPhoneErr] = useState(false);
+
+    const [nameValue, setNameValue] = useState('');
+    const handleNameChange = (e: any) => {
+      setNameValue(e.target.value);
+    }
+
+    const [emailValue, setEmailValue] = useState('');
+    const handleEmailChange = (e: any) => {
+      setEmailValue(e.target.value);
+    }
+
+    const [phoneValue, setPhoneValue] = useState('');
+    const handlePhoneChange = (e: any) => {
+      setPhoneValue(e.target.value);
+    }
+
+    const [messageValue, setMessageValue] = useState('');
+    const handleMessageChange = (e: any) => {
+      setMessageValue(e.target.value);
+    }
+
+    const clearInputs: () => void = () => {
+      setNameValue('');
+      setPhoneValue('');
+      setEmailValue('');
+      setMessageValue('');
+    }
+
+    const validateName: (input: string) => boolean = input => !!input;
+
+    const validatePhone: (input: string) => boolean = input => {
+      if (!input) return false;
+
+      if ( input.length < 14 ) return false;
+
+      return true;
+    }
+
+    const validateEmail: (input: string) => boolean = input => {
+      if(!input) return false;
+      const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(input);
+    }
+
+    const sendEmail = (e:  React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      if (!validateName(nameValue)) setNameErr(true); else setNameErr(false);
+      if (!validatePhone(phoneValue)) setPhoneErr(true); else setPhoneErr(false);
+      if (!validateEmail(emailValue)) setEmailErr(true); else setEmailErr(false);
+
+      if (!validateName(nameValue) || !validatePhone(phoneValue) || !validateEmail(emailValue)) return;
+
+      setLoading(true);
+    
+      emailjs.sendForm(envServiceId,
+        envTemplateId,
+        form.current,
+        { publicKey: envPublicKey }
+      ).then(() => {
+          toast.success('Enviado com sucesso!');
+          clearInputs();
+          setLoading(false);
+        }, () => {
+          toast.error('Houve um erro ao enviar sua mensagem :(');
+          clearInputs();
+          setLoading(false);
+        }
+      );
+      };
+
   return (
     <>
+
+      <Toaster/>
 
       <Header/>
 
@@ -26,9 +114,12 @@ function App() {
           <h1>Priorizamos a excelência em cada um de nossos empreendimentos.</h1>
           <a href="#contato"><button>Entrar em contato</button></a>
           <div className="hero-fotos">
-            <img src={mariaDolores} alt="Maria Dolores" />
-            <img src={aruna} alt="Aruna" />
-            <img src={vicente} alt="Vicente" />
+            <div className="image"><img src={mariaDolores} alt="Maria Dolores" /></div>
+            <div className="image"><img src={aruna} alt="Aruna" /></div>
+            <div className="image"><img src={vicente} alt="Vicente" /></div>
+
+            
+            
           </div>
         </div>
       </section>
@@ -72,7 +163,7 @@ function App() {
             <p>A fachada do Aruna Tower Residence é marcante e imponente, 
               com acabamento cerâmico que se estende até a garagem e iluminação 
               em LED que realça sua beleza.</p>
-              <button>Saiba Mais</button>
+              <a href="https://aruna.avempreendimentos.com.br/"><button>Saiba Mais</button></a>
           </div>
         </motion.div>
 
@@ -132,26 +223,68 @@ function App() {
             whileInView={{ rotateX:0 }} 
             viewport={{once:true}}
           >
-            <form action="#">
+            <form ref={form} onSubmit={sendEmail}>
               <div className="inputs">
                 <div className="input">
-                  <label htmlFor="nome">Nome</label>
-                  <input placeholder="João da Silva" name="nome" type="text" />
+                  <label htmlFor="name">Nome</label>
+                  <input disabled={isLoading} 
+                    required 
+                    autoComplete="off" 
+                    className={ nameErr ? 'input-error' : '' } 
+                    type="text" 
+                    name="name" 
+                    value={nameValue} 
+                    onChange={handleNameChange}
+                    placeholder="João da Silva"
+                  />
+                  <span style={ nameErr ? {} : {display:'none' }}>Insira um nome válido.</span>
                 </div>
                 <div className="input">
                   <label htmlFor="email">E-mail</label>
-                  <input placeholder="email@gmail.com" name="email" type="email" />
+                  <input disabled={isLoading}
+                    required
+                    autoComplete="off"
+                    className={ emailErr ? 'input-error' : '' }
+                    type="text"
+                    name="email"
+                    value={emailValue}
+                    onChange={handleEmailChange}
+                    placeholder="email@gmail.com"
+                  />
+                  <span style={ emailErr ? {} : {display:'none' }}>Insira um email válido.</span>
                 </div>
                 <div className="input">
-                  <label htmlFor="telefone">Telefone</label>
-                  <input placeholder="(00) 00000-0000" name="telefone" type="text" />
+                  <label htmlFor="phone">Telefone</label>
+                  <InputMask
+                    className={ phoneErr ? 'input-error' : '' }
+                    mask="(99) 99999-9999"
+                    maskPlaceholder={null}
+                    alwaysShowMask={false}
+                    type="text" 
+                    name="phone" 
+                    value={phoneValue} 
+                    onChange={handlePhoneChange}
+                    required
+                    autoComplete="off"
+                    disabled={isLoading}
+                    placeholder="(00) 00000-0000"
+                  />
+                  <span style={ phoneErr ? {} : {display:'none' } }>Insira um telefone válido.</span>
                 </div>
                 <div className="input">
-                  <label htmlFor="mensagem">Mensagem</label>
-                  <textarea placeholder="Escreva aqui sua mensagem..." name="telefone" />
+                  <label htmlFor="message">Mensagem</label>
+                  <textarea 
+                    placeholder="Escreva aqui sua mensagem..."
+                    name="message" 
+                    disabled={isLoading}
+                    required
+                    value={messageValue}
+                    onChange={handleMessageChange}
+                    autoComplete="off"
+                  />
                 </div>
 
-                <input type="submit" value="Enviar" formAction='#' />
+                <input className={ isLoading ? 'disabled-button' : '' }  disabled={isLoading} type="submit" value="Enviar" />
 
               </div>
             </form>
@@ -180,14 +313,16 @@ function App() {
               </div>
               <div className="mail">
                 <img src={mailIcon} alt="E-Mail" />
-                <span>adm@avempreendimentos.com.br</span>
+                <a href="mailto:adm@avempreendimentos.com.br">
+                  <span>adm@avempreendimentos.com.br</span>
+                </a>
               </div>
             </div>
           </div>
           <div className="secondary-info">
             <div className="social">
               <h4>Redes Sociais</h4>
-              <a href="#"><img src={instagramLogo} alt="Instagram" /></a>
+              <a href="https://www.instagram.com/avicenteempreendimentos/"><img src={instagramLogo} alt="Instagram" /></a>
             </div>
             <div className="menu">
               <h4>Menu</h4>

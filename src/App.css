@@ -88,10 +88,10 @@ section.first img {
   filter: grayscale(100%);
 }
 
-section.first img:nth-child(1) {
+section.first .image:nth-child(1) {
   z-index:3;
 }
-section.first img:nth-child(2) {
+section.first .image:nth-child(2) {
   z-index:2;
 }
 
@@ -277,6 +277,10 @@ section.third button:hover {
   transform: translateY(-4px);
 }
 
+/* END OF THIRD SECTION */ 
+
+/* START OF FOURTH SECTION */
+
 section.fourth {
   background: linear-gradient(360deg, var(--blue) 0%, var(--blue) 29%, #fff 29.01%);
 }
@@ -350,7 +354,7 @@ section.fourth textarea {
 
 section.fourth input[type="text"],
 section.fourth input[type="email"] {
-  min-height:75px;
+  min-height:65px;
 }
 
 section.fourth label {
@@ -392,6 +396,36 @@ section.fourth input[type="submit"] {
 section.fourth input[type="submit"]:hover {
   transition:500ms;
   box-shadow: 0px 0px 12.4px 3px hsl(206, 100%, 80%);
+}
+
+section.fourth .input-error ~ label {
+  color:lightcoral;
+}
+
+section.fourth .input span {
+  color:lightcoral;
+  font-weight:300;
+}
+
+section.fourth .input input:disabled,
+section.fourth .input textarea:disabled {
+    background-color:lightgrey !important;
+    color:lightgrey;
+}
+
+section.fourth .disabled-button {
+    background:lightgrey !important;
+    cursor:default !important;
+    color:grey !important;
+}
+
+section.fourth .disabled-button:hover {
+    transform: none !important;
+}
+
+section.fourth .input-error {
+  color:lightcoral !important;
+  border: 1px solid lightcoral !important;
 }
 
 /* END OF FOURTH SECTION */
@@ -491,12 +525,12 @@ section.footer .menu .items {
   flex-direction:column;
 }
 
-section.footer .menu .items a {
+section.footer a {
   color:hsl(0, 0%, 80%);
   text-decoration:none;
   font-size:1rem;
 }
 
-section.footer .menu .items a:hover {
+section.footer a:hover {
   text-decoration:underline;
 }
