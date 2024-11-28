@@ -24,7 +24,7 @@ function App() {
       <section id="inicio" className="first">
         <div className="content">
           <h1>Priorizamos a excelência em cada um de nossos empreendimentos.</h1>
-          <button>Entrar em contato</button>
+          <a href="#contato"><button>Entrar em contato</button></a>
           <div className="hero-fotos">
             <img src={mariaDolores} alt="Maria Dolores" />
             <img src={aruna} alt="Aruna" />

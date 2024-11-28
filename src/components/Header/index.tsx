@@ -2,6 +2,8 @@ import { motion, useScroll } from 'motion/react';
 
 
 import './styles.css';
+import './header-mobile.css'
+
 import vicenteLogo from '../../assets/vicente-logo.svg';
 
 export default function Header() {
@@ -13,7 +15,7 @@ export default function Header() {
             <header>
                 <div className="content">
                     <div className="logo">
-                        <img src={vicenteLogo} alt="A. Vicente" />
+                        <a href="#inicio"><img src={vicenteLogo} alt="A. Vicente" /></a>
                         <div className="logo-text">
                             <span>A. VICENTE</span>
                             <span>EMPREENDIMENTOS</span>

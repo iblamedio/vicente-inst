@@ -6,8 +6,7 @@
         width:90%;
     }
     section.fourth .text {
-        padding-left:1rem;
-        padding-top:0;
+        padding:0 1rem;
     }
 }
 
@@ -60,6 +59,10 @@
     }
     section.fourth .form-card {
         padding:2rem 0;
+    }
+    section.fourth input[type="text"],
+    section.fourth input[type="email"] {
+        min-height:55px;
     }
 }
 
