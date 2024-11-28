@@ -8,6 +8,11 @@ import mariaDolores from './assets/mariadolores.png';
 import aruna from './assets/aruna.png';
 import vicente from './assets/vicente.png';
 import alencar from './assets/alencar.png';
+import vicenteLogoWhite from './assets/vicente-logo-white.svg';
+import instagramLogo from './assets/instagram.svg';
+import phoneIcon from './assets/phone.svg';
+import mailIcon from './assets/mail.svg';
+
 
 function App() {
 
@@ -16,7 +21,7 @@ function App() {
 
       <Header/>
 
-      <section className="first">
+      <section id="inicio" className="first">
         <div className="content">
           <h1>Priorizamos a excelência em cada um de nossos empreendimentos.</h1>
           <button>Entrar em contato</button>
@@ -28,7 +33,7 @@ function App() {
         </div>
       </section>
 
-      <section className="second">
+      <section id="nossa-historia" className="second">
         <div className="text-container">
           <div className="text-content">
             <h1>Nossa História</h1>
@@ -53,7 +58,7 @@ function App() {
         </div>
       </section>
 
-      <section className="third">
+      <section id="empreendimentos" className="third">
         <motion.div  
           transition={{ duration: 0.8, ease: "circInOut" }} 
           initial={{opacity:0, x:-300}} 
@@ -114,7 +119,7 @@ function App() {
 
       </section>
 
-      <section className="fourth">
+      <section id="contato" className="fourth">
         <div className="content">
           <div className="text">
             <h1>Nos envie uma mensagem</h1>
@@ -151,6 +156,49 @@ function App() {
               </div>
             </form>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="footer">
+        <div className="content">
+          <div className="primary-info">
+            <div className="logo">
+              <img src={vicenteLogoWhite} alt="A. Vicente" />
+              <div className="logo-text">
+                  <span>A. VICENTE</span>
+                  <span>EMPREENDIMENTOS</span>
+              </div>
+            </div>
+            <div className="address">
+              <span>Rua 262, 270</span>
+              <span>Meia Praia - Itapema - SC</span>
+            </div>
+            <div className="contact-info">
+              <div className="phone">
+                <img src={phoneIcon} alt="Telefone" />
+                <span>(47) 3268-7871</span>
+              </div>
+              <div className="mail">
+                <img src={mailIcon} alt="E-Mail" />
+                <span>adm@avempreendimentos.com.br</span>
+              </div>
+            </div>
+          </div>
+          <div className="secondary-info">
+            <div className="social">
+              <h4>Redes Sociais</h4>
+              <a href="#"><img src={instagramLogo} alt="Instagram" /></a>
+            </div>
+            <div className="menu">
+              <h4>Menu</h4>
+              <div className="items">
+                <a href="#inicio">Início</a>
+                <a href="#nossa-historia">Nossa História</a>
+                <a href="#empreendimentos">Empreendimentos</a>
+                <a href="#contato">Contato</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

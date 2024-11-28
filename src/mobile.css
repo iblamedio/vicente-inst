@@ -55,6 +55,9 @@
       width:180px;
       height:220px;
     }
+    section.second .text-content p {
+        margin-bottom:5rem;
+    }
     section.fourth .form-card {
         padding:2rem 0;
     }
@@ -116,6 +119,18 @@
     }
     section.fourth .text {
         min-width:300px;
+    }
+    section.footer .secondary-info {
+        gap:2rem;
+    }
+    section.footer h4 {
+        font-size:1.125rem;
+    }
+}
+
+@media (max-width:350px) {
+    section.footer .secondary-info {
+        gap:1rem;
     }
 }
 
