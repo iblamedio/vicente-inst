@@ -8,10 +8,10 @@ import './App.css';
 import './mobile.css';
 
 import Header from './components/Header';
-import mariaDolores from './assets/mariadolores.png';
-import aruna from './assets/aruna.png';
-import vicente from './assets/vicente.png';
-import alencar from './assets/alencar.png';
+import mariaDolores from './assets/mariadolores.webp';
+import aruna from './assets/aruna.webp';
+import vicente from './assets/vicente.webp';
+import alencar from './assets/alencar.webp';
 import vicenteLogoWhite from './assets/vicente-logo-white.svg';
 import instagramLogo from './assets/instagram.svg';
 import phoneIcon from './assets/phone.svg';
