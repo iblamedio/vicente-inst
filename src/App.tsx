@@ -114,6 +114,46 @@ function App() {
 
       </section>
 
+      <section className="fourth">
+        <div className="content">
+          <div className="text">
+            <h1>Nos envie uma mensagem</h1>
+            <p>Preencha o formulário e nossa equipe entrará em contato.</p>
+          </div>
+
+          <motion.div className="form-card"
+            transition={{ duration: 0.8, ease: "circOut" }} 
+            initial={{ rotateX:90 }} 
+            whileInView={{ rotateX:0 }} 
+            viewport={{once:true}}
+          >
+            <form action="#">
+              <div className="inputs">
+                <div className="input">
+                  <label htmlFor="nome">Nome</label>
+                  <input placeholder="João da Silva" name="nome" type="text" />
+                </div>
+                <div className="input">
+                  <label htmlFor="email">E-mail</label>
+                  <input placeholder="email@gmail.com" name="email" type="email" />
+                </div>
+                <div className="input">
+                  <label htmlFor="telefone">Telefone</label>
+                  <input placeholder="(00) 00000-0000" name="telefone" type="text" />
+                </div>
+                <div className="input">
+                  <label htmlFor="mensagem">Mensagem</label>
+                  <textarea placeholder="Escreva aqui sua mensagem..." name="telefone" />
+                </div>
+
+                <input type="submit" value="Enviar" formAction='#' />
+
+              </div>
+            </form>
+          </motion.div>
+        </div>
+      </section>
+
     </>
   )
 }

@@ -5,6 +5,10 @@
     section.second .photo-container .photo-content {
         width:90%;
     }
+    section.fourth .text {
+        padding-left:1rem;
+        padding-top:0;
+    }
 }
 
 @media (max-width:750px) {
@@ -31,12 +35,28 @@
     section.third p {
         width:100%;
     }
+    section.fourth .content {
+        width:100%;
+    }
+    section.fourth .form-card {
+        min-width: 300px;
+        border-radius:15px;
+    }
+    section.fourth .input {
+        width:90%;
+    }
+    section.fourth input[type="submit"] {
+        width:90%;
+    }
 }
 
 @media (max-width:600px) {
     section.first img {
       width:180px;
       height:220px;
+    }
+    section.fourth .form-card {
+        padding:2rem 0;
     }
 }
 
@@ -73,6 +93,29 @@
     }
     section.third button {
         width:100%;
+    }
+    section.fourth h1 {
+        font-size:1.25rem !important;
+    }
+    section.fourth p {
+        font-size:1rem !important;
+    }
+    section.fourth input::placeholder,
+    section.fourth textarea::placeholder {
+        font-size:1rem;
+    }
+    section.fourth input,
+    section.fourth textarea {
+        font-size:1rem;
+    }
+    section.fourth label {
+        font-size:1rem;
+    }
+    section.fourth input[type="submit"] {
+        font-size:1.25rem;
+    }
+    section.fourth .text {
+        min-width:300px;
     }
 }
 
