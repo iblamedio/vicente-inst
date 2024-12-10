@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+::-moz-selection {
+  color: hsl(0, 0%, 52%) !important;
+  background: hsl(206, 100%, 10%);
+}
+
+::selection {
+  color: hsl(0, 0%, 52%) !important;
+  background: hsl(206, 100%, 10%);
+}
+
+.noselect {
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}
+
 * {
   box-sizing:border-box;
 }
@@ -26,16 +45,18 @@ section {
 }
 
 section.first {
-  padding-top:11.25rem;
+  display:grid;
 }
 
 section.first div.content {
-  width:90%;
+  padding-top:11.25rem;
+  width:100%;
   margin:auto;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  height:100%;
 }
 
 section.first h1 {
@@ -46,11 +67,11 @@ section.first h1 {
   text-wrap:balance;
   font-size:2rem;
   font-weight:600;
-
   background: linear-gradient(90deg, var(--blue) 0%, hsl(206, 100%, 30%) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
 }
 
 section.first button {
@@ -60,7 +81,7 @@ section.first button {
   color:#fff;
   outline:none;
   border:none;
-  border-radius:30px;
+  border-radius:.5rem;
   padding:1rem 2.5rem;
   font-size:1.25rem;
   font-weight:600;
@@ -69,36 +90,60 @@ section.first button {
 }
 
 section.first button:hover {
-  transition:500ms;
+  transition:200ms;
   box-shadow: 0px 0px 12.4px 3px hsl(206, 100%, 80%);
+  scale:1.05;
 }
 
 section.first div.hero-fotos {
-  margin-top:11.25rem;
   display:flex;
+  gap:2rem;
+  margin:11.25rem auto -4rem;
 }
 
-section.first img {
+section.first .image {
+  display:grid;
+  cursor:pointer;
+  width:fit-content;
+}
+
+section.first div.hero-fotos.mobile {
+  width:100%;
+}
+
+section.first div.hero-fotos img {
   transition:500ms;
   width:260px;
   height:315px;
-  transform: matrix(0.87, 0.5, 0, 1, 0, 0);
-  margin:0 -2.5rem;
   -webkit-filter: grayscale(100%); 
   filter: grayscale(100%);
+  grid-area: 1 / 1;
 }
 
-section.first .image:nth-child(1) {
-  z-index:3;
-}
-section.first .image:nth-child(2) {
-  z-index:2;
-}
-
-section.first img:hover {
-  transform:translateY(-10rem);
+section.first .image:hover img {
+  transform:translateY(-6rem);
   -webkit-filter: grayscale(0%); 
   filter: grayscale(0%);
+}
+
+section.first .image:hover .hero-overlay {
+  transition:500ms;
+  transform:translateY(-6rem);
+}
+
+section.first .hero-overlay {
+  background: linear-gradient(180deg, var(--blue) 5%, rgba(0, 33, 58, 0) 15%);
+  width:100%;
+  height:100%;
+  -webkit-filter: grayscale(0%) !important; 
+  filter: grayscale(0%) !important;
+  transition:500ms;
+  grid-area: 1 / 1;
+  text-align:center;
+  font-size:1rem;
+  font-weight:600;
+  color:#fff;
+  padding-top:.75rem;
 }
 
 /* END OF FIRST SECTION */
@@ -109,12 +154,9 @@ section.second {
   position:relative;
   width:100vw;
   z-index:5;
-  margin-top:-4rem;
-  border-radius:30px 30px 0 0;
   border-top:1px solid hsl(0, 0%, 80%);
   border-bottom:1px solid hsl(0, 0%, 80%);
   background: rgba(255, 255, 255, 0.5);
-  /* backdrop-filter: blur(.25rem); */
   display:flex;
   padding:11.25rem 0;
   flex-wrap: wrap;
@@ -204,18 +246,35 @@ section.third {
   padding:11.25rem 0;
   color:#fff;
   display:flex;
-  flex-direction:column;
+  flex-direction:column-reverse;
   gap:3.25rem;
 }
 
 section.third .card { 
   background:linear-gradient(to left, var(--blue), hsl(206, 100%, 20%));
   width:60%;
+  padding-top:2rem;
+}
+
+section.third .card-content {
   display:flex;
   justify-content:space-evenly;
-  padding:3.5rem 0;
   flex-wrap: wrap;
   gap:2rem;
+  padding:3.5rem 0;
+}
+
+section.third .card-seal {
+  background-color:hsl(0, 0%, 80%);
+  color:var(--blue);
+  width:fit-content;
+  padding:.5rem 1.5rem .5rem 8rem;
+  font-size:1.25rem;
+  border-radius:0px 5px 5px 0px;
+}
+
+section.third .card-seal span {
+  font-weight:600;
 }
 
 section.third .card:nth-child(2) {
@@ -345,7 +404,6 @@ section.fourth input[type="email"],
 section.fourth textarea {
   border:1px solid hsl(0, 0%, 80%);
   outline:none;
-  border-radius:15px;
   padding-left:1.75rem;
   color:var(--blue);
   font-family: 'Outfit';
@@ -464,7 +522,7 @@ section.footer div.logo-text span {
 }
 
 section.footer div.logo-text span:first-child {
-  font-size:2rem;
+  font-size:2.25rem;
   font-weight:600;
 } 
 

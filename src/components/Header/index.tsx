@@ -52,7 +52,7 @@ export default function Header() {
                         <div className="logo">
                             <img src={vicenteLogo} alt="A. Vicente" />
                             <div className="logo-text">
-                                <span>A. VICENTE</span>
+                                <span>AVICENTE</span>
                                 <span>EMPREENDIMENTOS</span>
                             </div>
                         </div> 

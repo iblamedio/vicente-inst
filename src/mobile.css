@@ -8,6 +8,22 @@
     section.fourth .text {
         padding:0 1rem;
     }
+    section.first .bg-images {
+        display:none !important;
+    }
+    section.first div.content {
+        background: transparent;
+    }
+}
+
+@media (max-width:850px) {
+    section.first div.hero-fotos {
+        gap:1rem;
+    }
+    section.first img {
+        width:auto !important;
+        height:240px !important;
+    }
 }
 
 @media (max-width:750px) {
@@ -49,10 +65,22 @@
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:620px) {
+    section.first div.hero-fotos {
+        gap:1rem;
+    }
     section.first img {
-      width:180px;
-      height:220px;
+        width:auto !important;
+        height:180px !important;
+    }
+    section.first div.hero-overlay {
+        font-size:.75rem;
+    }
+}
+
+@media (max-width:600px) {
+    section.first .content {
+        padding-top:5rem !important;
     }
     section.second .text-content p {
         margin-bottom:5rem;
@@ -75,6 +103,19 @@
     }
     section.third p {
         font-size:1rem;
+    }
+}
+
+@media (max-width:480px) {
+    section.first div.hero-fotos {
+        gap:.5rem;
+    }
+    section.first img {
+        width:auto !important;
+        height:110px !important;
+    }
+    section.first div.hero-overlay {
+        display:none;
     }
 }
 
