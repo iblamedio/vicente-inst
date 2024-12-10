@@ -7,14 +7,15 @@ import emailjs from '@emailjs/browser';
 import './App.css';
 import './mobile.css';
 
-import Header from './components/Header';
 import mariaDolores from './assets/mariadolores.webp';
 import aruna from './assets/aruna.webp';
 import vicente from './assets/vicente.webp';
-import alencar from './assets/alencar.webp';
 import vicenteLogoWhite from './assets/vicente-logo-white.svg';
 import instagramLogo from './assets/instagram.svg';
 
+import Header from './components/Header';
+import Inicio from './components/Inicio';
+import NossaHistoria from './components/Nossa Historia';
 
 function App() {
 
@@ -107,54 +108,9 @@ function App() {
 
       <Header/>
 
-      <section id="inicio" className="first">
-        <div className="content">
-          <h1 className="noselect">Priorizamos a excelência em cada um de nossos empreendimentos.</h1>
-          <a href="#contato"><button>Entrar em contato</button></a>
-            <div className="hero-fotos">
-              <div className="image">
-                <img src={mariaDolores} alt="Maria Dolores" />
-                <div className="hero-overlay">Residencial Maria Dolores</div>
-              </div>
-              <div className="image">
-                <img src={aruna} alt="Aruna" />
-                <div className="hero-overlay">Aruna Tower</div>
-              </div>
-              <div className="image">
-                <img src={vicente} alt="Vicente" />
-                <div className="hero-overlay">Residencial Vicente</div>
-              </div>
-            </div>
-        </div>
-      </section>
+      <Inicio/>
 
-      <section id="nossa-historia" className="second">
-        <div className="text-container">
-          <div className="text-content">
-            <h1>Nossa História</h1>
-            <p>
-              A <span>AVicente Empreendimentos</span> nasceu do sonho e da determinação de 
-              <span> Alencar Maurício Vicente</span>, que desde muito jovem superou 
-              os mais diversos desafios, tudo com o objetivo de transformar sua 
-              vida e construir um legado em sua história.<br/><br/>
-              
-              Natural de Indaial, Santa Catarina, Alencar 
-              mudou-se ainda criança para <span>Itapema</span>, onde trabalhou 
-              em diversas áreas, indo da venda de picolé à aprender sobre desenho 
-              e atuar em escritório de arquitetura. Sempre em busca de conhecimento 
-              e oportunidades, Alencar entra para o dia a dia do mercado imobiliário 
-              e aqui encontra sua paixão. <span>Em 2019, nasce a AVicente Empreendimentos.</span>
-            </p>
-          </div>
-        </div>
-
-        <div className="photo-container">
-          <div className="photo-content">
-            <img src={alencar} alt="Alencar Vicente" />
-            <h1>Alencar Maurício Vicente</h1>
-          </div>
-        </div>
-      </section>
+      <NossaHistoria/>
 
       <section id="empreendimentos" className="third">
         <motion.div  
