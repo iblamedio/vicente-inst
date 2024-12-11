@@ -8,21 +8,8 @@
     section.fourth .text {
         padding:0 1rem;
     }
-    section.first .bg-images {
-        display:none !important;
-    }
-    section.first div.content {
-        background: transparent;
-    }
-}
-
-@media (max-width:850px) {
-    section.first div.hero-fotos {
-        gap:1rem;
-    }
-    section.first img {
-        width:auto !important;
-        height:240px !important;
+    section.first h1 {
+        font-size:2rem !important;
     }
 }
 
@@ -106,27 +93,16 @@
     }
 }
 
-@media (max-width:480px) {
-    section.first div.hero-fotos {
-        gap:.5rem;
+@media (max-width:450px) {    
+    section.first h1 {
+        font-size: 1.5rem !important;
     }
-    section.first img {
-        width:auto !important;
-        height:110px !important;
-    }
-    section.first div.hero-overlay {
-        display:none;
+    section.first button span {
+        font-size:1rem !important;
     }
 }
 
 @media (max-width:400px) {
-    section.first img {
-        width:130px;
-        height:160px;
-    }
-    section.first h1 span {
-        font-size: 1.5rem;
-    }
     section.second .text-container p {
         font-size:1rem;
     }

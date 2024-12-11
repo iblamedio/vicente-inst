@@ -11,7 +11,7 @@ div.header-container {
 
 div.header-container.scroll-zero {
     transition:200ms;
-    background:linear-gradient(to bottom, hsla(206, 100%, 10%, 0.555), transparent) !important;
+    background:transparent !important;
 }
 
 div.header-container.scroll-zero header nav span {

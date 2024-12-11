@@ -6,7 +6,7 @@ section.first {
     height:90vh;
     grid-area:1/1;
     z-index:3;
-    background: linear-gradient(180deg, rgba(0, 33, 58, 0.274) 87.2%, #FFFFFF 100%);
+    background: linear-gradient(90deg, rgba(0, 33, 58, 0.5) 0%, rgba(0, 33, 58, 0.275) 100%);
 }
 
 section.first div.content {
@@ -31,7 +31,10 @@ div.first-bg {
 }   
 
 section.first div.headline {
-    max-width:50ch;
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    margin-top:-300px;
 }
 
 section.first h1 {
@@ -39,40 +42,38 @@ section.first h1 {
     line-height: 1.4em;
     max-width:30ch;
     text-align:left;
-    text-wrap:balance;
     font-size:2rem;
-    font-weight:600;
-    background: #fff none repeat scroll 0 0;
-    box-decoration-break: clone;
-    display: inline;
-    padding: 0 16px;
+    font-weight:400;
+    color:#fff;
 }
 
-section.first h1 span {    
-    background: linear-gradient(-90deg, var(--blue) 0%, hsl(206, 100%, 30%) 100%);
+section.first h1 span {
+    font-weight:600;
+}
+
+section.first button span {
+    font-weight: 600;
+    font-size:1.25rem;
+    background: linear-gradient(270deg, #005799 0%, #001D33 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    max-width:30ch;
+    font-family:'Outfit';
 }
 
 section.first button {
     cursor:pointer;
-    font-family:'Outfit';
-    background: linear-gradient(-90deg, var(--blue) 0%, hsl(206, 100%, 30%) 100%);
-    color:#fff;
     outline:none;
     border:none;
-    border-radius:.25rem;
+    border-radius:2rem;
     padding:1rem 2.5rem;
-    font-size:1.25rem;
-    font-weight:600;
     transition:500ms;
     margin-top:1.5rem;
+    box-shadow: 0px 5px 0px #00213A;
+    background: #FFFFFF;
 }
 
 section.first button:hover {
     transition:200ms;
-    box-shadow: 0px 0px 12.4px 3px hsl(206, 100%, 80%);
-    scale:1.05;
+    transform:translateY(-0.25rem);
 }
