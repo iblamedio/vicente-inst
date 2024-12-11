@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import './styles.css';
 import './header-mobile.css'
 
-import vicenteLogo from '../../assets/vicente-logo-white.svg';
+import vicenteLogo from '../../../../public/assets/vicente-logo-white.svg';
 
 export default function Header() {
 
@@ -28,7 +28,7 @@ export default function Header() {
                 <div className="content">
                     <a href="#inicio">
                         <div className="logo">
-                            <img src={vicenteLogo} alt="A. Vicente" />
+                            <img src={vicenteLogo.src} alt="A. Vicente" />
                             <div className="logo-text">
                                 <span>AVICENTE</span>
                                 <span>EMPREENDIMENTOS</span>

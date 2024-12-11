@@ -1,6 +1,6 @@
 import './styles.css';
 
-import alencar from '../../assets/alencar.webp';
+import alencar from '../../../../public/assets/alencar.webp';
 
 export default function NossaHistoria () {
     return (
@@ -26,7 +26,7 @@ export default function NossaHistoria () {
 
         <div className="photo-container">
           <div className="photo-content">
-            <img src={alencar} alt="Alencar Vicente" />
+            <img src={alencar.src} alt="Alencar Vicente" />
             <h1>Alencar Maurício Vicente</h1>
           </div>
         </div>

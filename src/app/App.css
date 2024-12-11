@@ -30,11 +30,11 @@
 html, body {
   overflow-x:hidden;
   scroll-behavior:smooth;
+  font-family: 'Outfit';
 }
 
 body {
   margin: 0;
-  font-family: 'Outfit';
   max-width: 100%;
   position:relative;
 }

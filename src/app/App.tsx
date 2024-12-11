@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import InputMask from '@mona-health/react-input-mask';
@@ -7,11 +9,11 @@ import emailjs from '@emailjs/browser';
 import './App.css';
 import './mobile.css';
 
-import mariaDolores from './assets/mariadolores.webp';
-import aruna from './assets/aruna.webp';
-import vicente from './assets/vicente.webp';
-import vicenteLogoWhite from './assets/vicente-logo-white.svg';
-import instagramLogo from './assets/instagram.svg';
+import mariaDolores from '../../public/assets/mariadolores.webp';
+import aruna from '../../public/assets/aruna.webp';
+import vicente from '../../public/assets/vicente.webp';
+import vicenteLogoWhite from '../../public/assets/vicente-logo-white.svg';
+import instagramLogo from '../../public/assets/instagram.svg';
 
 import Header from './components/Header';
 import WppButton from './components/Wpp Button';
@@ -21,9 +23,9 @@ import NossaHistoria from './components/Nossa Historia';
 
 function App() {
 
-  const envServiceId: string = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
-  const envTemplateId: string = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
-  const envPublicKey: string = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
+  const envServiceId: string = process.env.EMAILJS_SERVICE_ID || '';
+  const envTemplateId: string = process.env.EMAILJS_TEMPLATE_ID || '';
+  const envPublicKey: string = process.env.EMAILJS_PUBLIC_KEY || '';
 
   const [isLoading, setLoading] = useState(false);
 
@@ -129,7 +131,7 @@ function App() {
             3ª Obra | <span>Entrega prevista para 2027</span>
           </div>
           <div className="card-content">
-            <img src={aruna} alt="Aruna" />
+            <img src={aruna.src} alt="Aruna" />
             <div className="text">
               <h1>Aruna Tower Residence</h1>
               <p>A fachada do Aruna Tower Residence é marcante e imponente, 
@@ -152,7 +154,7 @@ function App() {
             2ª Obra | <span>Entrega prevista para o 1º semetre de 2025</span>
           </div>
           <div className="card-content">
-            <img src={vicente} alt="Vicente" />
+            <img src={vicente.src} alt="Vicente" />
             <div className="text">
               <h1>Residencial Vicente</h1>
               <p>
@@ -181,7 +183,7 @@ function App() {
             1ª Obra | <span>Entregue</span>
           </div>
           <div className="card-content">
-            <img src={mariaDolores} alt="Maria Dolores" />
+            <img src={mariaDolores.src} alt="Maria Dolores" />
             <div className="text">
               <h1>Residencial Maria Dolores</h1>
               <p>
@@ -281,7 +283,7 @@ function App() {
         <div className="content">
           <div className="primary-info">
             <div className="logo">
-              <img src={vicenteLogoWhite} alt="A. Vicente" />
+              <img src={vicenteLogoWhite.src} alt="A. Vicente" />
               <div className="logo-text">
                   <span>AVICENTE</span>
                   <span>EMPREENDIMENTOS</span>
