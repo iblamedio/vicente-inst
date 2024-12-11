@@ -1,6 +1,7 @@
 import './styles.css';
 
 import alencar from '../../../../public/assets/alencar.webp';
+import Image from 'next/image';
 
 export default function NossaHistoria () {
     return (
@@ -26,7 +27,7 @@ export default function NossaHistoria () {
 
         <div className="photo-container">
           <div className="photo-content">
-            <img src={alencar.src} alt="Alencar Vicente" />
+            <Image src={alencar.src} alt="Alencar Vicente" />
             <h1>Alencar Maurício Vicente</h1>
           </div>
         </div>

@@ -19,13 +19,14 @@ import Header from './components/Header';
 import WppButton from './components/Wpp Button';
 import Inicio from './components/Inicio';
 import NossaHistoria from './components/Nossa Historia';
+import Image from 'next/image';
 
 
 function App() {
 
-  const envServiceId: string = process.env.EMAILJS_SERVICE_ID || '';
-  const envTemplateId: string = process.env.EMAILJS_TEMPLATE_ID || '';
-  const envPublicKey: string = process.env.EMAILJS_PUBLIC_KEY || '';
+  const envServiceId: string = process.env.EMAILJS_SERVICE_ID ?? '';
+  const envTemplateId: string = process.env.EMAILJS_TEMPLATE_ID ?? '';
+  const envPublicKey: string = process.env.EMAILJS_PUBLIC_KEY ?? '';
 
   const [isLoading, setLoading] = useState(false);
 
@@ -74,7 +75,7 @@ function App() {
 
     const validateEmail: (input: string) => boolean = input => {
       if(!input) return false;
-      const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(input);
     }
 
@@ -131,7 +132,7 @@ function App() {
             3ª Obra | <span>Entrega prevista para 2027</span>
           </div>
           <div className="card-content">
-            <img src={aruna.src} alt="Aruna" />
+            <Image src={aruna.src} alt="Aruna" />
             <div className="text">
               <h1>Aruna Tower Residence</h1>
               <p>A fachada do Aruna Tower Residence é marcante e imponente, 
@@ -154,7 +155,7 @@ function App() {
             2ª Obra | <span>Entrega prevista para o 1º semetre de 2025</span>
           </div>
           <div className="card-content">
-            <img src={vicente.src} alt="Vicente" />
+            <Image src={vicente.src} alt="Vicente" />
             <div className="text">
               <h1>Residencial Vicente</h1>
               <p>
@@ -183,7 +184,7 @@ function App() {
             1ª Obra | <span>Entregue</span>
           </div>
           <div className="card-content">
-            <img src={mariaDolores.src} alt="Maria Dolores" />
+            <Image src={mariaDolores.src} alt="Maria Dolores" />
             <div className="text">
               <h1>Residencial Maria Dolores</h1>
               <p>
@@ -283,7 +284,7 @@ function App() {
         <div className="content">
           <div className="primary-info">
             <div className="logo">
-              <img src={vicenteLogoWhite.src} alt="A. Vicente" />
+              <Image src={vicenteLogoWhite.src} alt="A. Vicente" />
               <div className="logo-text">
                   <span>AVICENTE</span>
                   <span>EMPREENDIMENTOS</span>
@@ -298,7 +299,7 @@ function App() {
           <div className="secondary-info">
             <div className="social">
               <h4>Redes Sociais</h4>
-              <a href="https://www.instagram.com/avicenteempreendimentos/"><img src={instagramLogo} alt="Instagram" /></a>
+              <a href="https://www.instagram.com/avicenteempreendimentos/"><Image src={instagramLogo} alt="Instagram" /></a>
             </div>
             <div className="menu">
               <h4>Menu</h4>

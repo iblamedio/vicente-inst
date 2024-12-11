@@ -5,6 +5,7 @@ import './styles.css';
 import './header-mobile.css'
 
 import vicenteLogo from '../../../../public/assets/vicente-logo-white.svg';
+import Image from 'next/image';
 
 export default function Header() {
 
@@ -15,7 +16,7 @@ export default function Header() {
     useEffect (()=>{
 
         document.addEventListener("scroll", () => {
-            let scrollPos = document.scrollingElement?.scrollTop || 0;
+            const scrollPos = document.scrollingElement?.scrollTop ?? 0;
 
             setScrollPosState(scrollPos);
         });
@@ -28,7 +29,7 @@ export default function Header() {
                 <div className="content">
                     <a href="#inicio">
                         <div className="logo">
-                            <img src={vicenteLogo.src} alt="A. Vicente" />
+                            <Image src={vicenteLogo.src} alt="A. Vicente" />
                             <div className="logo-text">
                                 <span>AVICENTE</span>
                                 <span>EMPREENDIMENTOS</span>
