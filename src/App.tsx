@@ -14,8 +14,10 @@ import vicenteLogoWhite from './assets/vicente-logo-white.svg';
 import instagramLogo from './assets/instagram.svg';
 
 import Header from './components/Header';
+import WppButton from './components/Wpp Button';
 import Inicio from './components/Inicio';
 import NossaHistoria from './components/Nossa Historia';
+
 
 function App() {
 
@@ -105,6 +107,8 @@ function App() {
     <>
 
       <Toaster/>
+
+      <WppButton/>
 
       <Header/>
 

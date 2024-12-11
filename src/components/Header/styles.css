@@ -11,7 +11,14 @@ div.header-container {
 
 div.header-container.scroll-zero {
     transition:200ms;
-    background:linear-gradient(to bottom, var(--blue), transparent) !important;
+    background:linear-gradient(to bottom, hsla(206, 100%, 10%, 0.555), transparent) !important;
+}
+
+div.header-container.scroll-zero header nav span {
+    color:hsl(0, 0%, 80%);
+}
+div.header-container.scroll-zero header nav span:hover {
+    color:hsl(0, 0%, 52%);
 }
 
 header a {
@@ -20,7 +27,7 @@ header a {
 
 header div.content {
     height:100%;
-    width:90%;
+    width:80%;
     margin:auto;
     display:flex;
     justify-content:space-between;

@@ -10,7 +10,7 @@ section.first {
 }
 
 section.first div.content {
-    width:90%;
+    width:80%;
     margin:auto;
     display:flex;
     flex-direction:column;
@@ -28,7 +28,7 @@ div.first-bg {
     background-size:cover;
     background-repeat: no-repeat;
     background-blend-mode: normal;
-}
+}   
 
 section.first div.headline {
     max-width:50ch;
