@@ -79,7 +79,8 @@ section.second .photo-container .photo-content h1 {
     width: 300px;
 }
 
-section.second img {
+section.second .img {
+    position:relative;
     width: 350px;
     height: 340px;
     box-shadow: -24px -1.75rem 0px hsl(0, 0%, 52%);

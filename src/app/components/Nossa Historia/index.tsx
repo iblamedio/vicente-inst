@@ -27,7 +27,9 @@ export default function NossaHistoria () {
 
         <div className="photo-container">
           <div className="photo-content">
-            <Image src={alencar.src} alt="Alencar Vicente" />
+            <div className="img">
+              <Image fill src={alencar.src} alt="Alencar Vicente" />
+            </div>
             <h1>Alencar Maurício Vicente</h1>
           </div>
         </div>

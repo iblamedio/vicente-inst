@@ -87,7 +87,8 @@ section.third .card:nth-child(2) {
   margin-left:auto;
 }
 
-section.third img {
+section.third .img {
+  position:relative;
   width:270px;
   height:335px;
 }
@@ -315,6 +316,11 @@ section.footer div.logo {
   gap:1rem;
 }
 
+section.footer div.logo .img {
+  position:relative;
+  width:74px;
+}
+
 section.footer div.logo-text {
   display:flex;
   flex-direction:column;
@@ -379,7 +385,7 @@ section.footer .secondary-info {
   flex-wrap:nowrap;
 }
 
-section.footer .secondary-info img {
+section.footer .secondary-info .img {
   cursor:pointer;
 }
 

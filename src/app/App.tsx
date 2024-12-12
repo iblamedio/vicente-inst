@@ -132,7 +132,9 @@ function App() {
             3ª Obra | <span>Entrega prevista para 2027</span>
           </div>
           <div className="card-content">
-            <Image src={aruna.src} alt="Aruna" />
+            <div className="img">
+              <Image fill src={aruna.src} alt="Aruna" />
+            </div>
             <div className="text">
               <h1>Aruna Tower Residence</h1>
               <p>A fachada do Aruna Tower Residence é marcante e imponente, 
@@ -155,7 +157,9 @@ function App() {
             2ª Obra | <span>Entrega prevista para o 1º semetre de 2025</span>
           </div>
           <div className="card-content">
-            <Image src={vicente.src} alt="Vicente" />
+            <div className="img">
+              <Image fill src={vicente.src} alt="Vicente" />
+            </div>
             <div className="text">
               <h1>Residencial Vicente</h1>
               <p>
@@ -184,7 +188,9 @@ function App() {
             1ª Obra | <span>Entregue</span>
           </div>
           <div className="card-content">
-            <Image src={mariaDolores.src} alt="Maria Dolores" />
+            <div className="img">
+              <Image fill src={mariaDolores.src} alt="Maria Dolores" />
+            </div>
             <div className="text">
               <h1>Residencial Maria Dolores</h1>
               <p>
@@ -284,7 +290,9 @@ function App() {
         <div className="content">
           <div className="primary-info">
             <div className="logo">
-              <Image src={vicenteLogoWhite.src} alt="A. Vicente" />
+              <div className="img">
+                <Image fill src={vicenteLogoWhite.src} alt="A. Vicente" />
+              </div>
               <div className="logo-text">
                   <span>AVICENTE</span>
                   <span>EMPREENDIMENTOS</span>

@@ -40,8 +40,10 @@ div.logo {
     gap:1rem;
 }
 
-header img {
+header .img {
+    position:relative;
     width:74px;
+    height:74px;
     cursor: pointer;
 }
 

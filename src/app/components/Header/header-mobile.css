@@ -17,7 +17,8 @@
     header .logo-text {
         display:none !important;
     }
-    header img {
+    header .img {
         width:52px;
+        height:52px;
     }
 }

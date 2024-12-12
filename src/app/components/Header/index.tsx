@@ -29,7 +29,9 @@ export default function Header() {
                 <div className="content">
                     <a href="#inicio">
                         <div className="logo">
-                            <Image src={vicenteLogo.src} alt="A. Vicente" />
+                            <div className="img">
+                                <Image fill src={vicenteLogo.src} alt="A. Vicente" />
+                            </div>
                             <div className="logo-text">
                                 <span>AVICENTE</span>
                                 <span>EMPREENDIMENTOS</span>
