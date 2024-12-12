@@ -1,0 +1,107 @@
+section.footer {
+    background-color: var(--blue);
+    padding-top: 5rem;
+}
+
+section.footer div.content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+section.footer div.logo {
+    height: fit-content;
+    display: flex;
+    gap: 1rem;
+}
+
+section.footer div.logo .img {
+    position: relative;
+    width: 74px;
+}
+
+section.footer div.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+section.footer div.logo-text span {
+    color: #fff !important;
+}
+
+section.footer div.logo-text span:first-child {
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+section.footer div.logo-text span:last-child {
+    font-size: 1rem;
+    letter-spacing: .1em;
+}
+
+section.footer span {
+    color: hsl(0, 0%, 80%);
+}
+
+section.footer h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #fff;
+    line-height: 3em;
+}
+
+section.footer .primary-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1rem;
+}
+
+section.footer .address {
+    display: flex;
+    flex-direction: column;
+}
+
+section.footer .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+section.footer .phone,
+section.footer .mail {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+section.footer .secondary-info {
+    display: flex;
+    gap: 5rem;
+    text-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+section.footer .secondary-info .img {
+    cursor: pointer;
+}
+
+section.footer .menu .items {
+    display: flex;
+    flex-direction: column;
+}
+
+section.footer a {
+    color: hsl(0, 0%, 80%);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+section.footer a:hover {
+    text-decoration: underline;
+}

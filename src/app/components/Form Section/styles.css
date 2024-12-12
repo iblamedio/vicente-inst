@@ -1,0 +1,145 @@
+section.fourth {
+    background: linear-gradient(360deg, var(--blue) 0%, var(--blue) 29%, #fff 29.01%);
+}
+
+section.fourth .content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+section.fourth .text {
+    flex: 1;
+    padding-top: 17.5rem;
+    min-width: 400px;
+}
+
+section.fourth .text h1 {
+    font-size: 2rem;
+    margin: 0;
+    background: linear-gradient(90deg, var(--blue) 0%, hsl(206, 100%, 30%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    line-height: 2em;
+}
+
+section.fourth .text p {
+    margin: 0;
+    font-size: 1.25rem;
+    color: hsl(0, 0%, 52%);
+}
+
+section.fourth .form-card {
+    border: 1px solid hsl(0, 0%, 80%);
+    background-color: #fff;
+    border-radius: 50px;
+    flex: 1.5;
+    padding: 4.5rem 0;
+    min-width: 580px;
+    max-width: 800px;
+}
+
+section.fourth .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.25rem;
+}
+
+section.fourth .input {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+section.fourth input[type="text"],
+section.fourth input[type="email"],
+section.fourth textarea {
+    border: 1px solid hsl(0, 0%, 80%);
+    outline: none;
+    padding-left: 1.75rem;
+    color: var(--blue);
+    font-family: 'Outfit';
+    font-size: 1.25rem;
+}
+
+section.fourth input[type="text"],
+section.fourth input[type="email"] {
+    min-height: 65px;
+}
+
+section.fourth label {
+    color: hsl(0, 0%, 52%);
+    font-size: 1.125rem;
+    line-height: 1.6em;
+}
+
+section.fourth input::placeholder,
+section.fourth textarea::placeholder {
+    font-family: 'Outfit';
+    color: hsl(0, 0%, 80%);
+    font-size: 1rem;
+    margin-left: 2rem;
+}
+
+section.fourth textarea {
+    min-height: 175px;
+    padding-top: 1rem;
+    resize: none;
+}
+
+section.fourth input[type="submit"] {
+    width: 80%;
+    margin-top: 2rem;
+    min-height: 75px;
+    background: linear-gradient(90deg, var(--blue) 0%, #005BA0 100%);
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 500ms;
+    font-family: 'Outfit';
+}
+
+section.fourth input[type="submit"]:hover {
+    transition: 500ms;
+    box-shadow: 0px 0px 12.4px 3px hsl(206, 100%, 80%);
+}
+
+section.fourth .input-error~label {
+    color: lightcoral;
+}
+
+section.fourth .input span {
+    color: lightcoral;
+    font-weight: 300;
+}
+
+section.fourth .input input:disabled,
+section.fourth .input textarea:disabled {
+    background-color: lightgrey !important;
+    color: lightgrey;
+}
+
+section.fourth .disabled-button {
+    background: lightgrey !important;
+    cursor: default !important;
+    color: grey !important;
+}
+
+section.fourth .disabled-button:hover {
+    transform: none !important;
+}
+
+section.fourth .input-error {
+    color: lightcoral !important;
+    border: 1px solid lightcoral !important;
+}
