@@ -1,5 +1,7 @@
 import { motion, useScroll } from 'motion/react';
 import { useEffect, useState } from 'react';
+import { Squash as Hamburger } from 'hamburger-react'
+import Modal from 'react-modal';
 
 import './styles.css';
 import './header-mobile.css'
@@ -9,9 +11,15 @@ import Image from 'next/image';
 
 export default function Header() {
 
+    Modal.setAppElement('#app');
+
     const { scrollYProgress } = useScroll();
 
     const [scrollPosState, setScrollPosState] = useState(0);
+
+    const [isOpen, setOpen] = useState(false);
+
+    const closeModal = () => setOpen(false);
 
     useEffect (()=>{
 
@@ -24,7 +32,9 @@ export default function Header() {
     },[]);
 
     return (
-        <div className={`header-container` + (scrollPosState === 0 ? ' scroll-zero' : '')}>
+        <div className={
+            scrollPosState !== 0 || isOpen ? "header-container" : "header-container scroll-zero"
+        }>
             <header>
                 <div className="content">
                     <a href="#inicio">
@@ -39,12 +49,33 @@ export default function Header() {
                         </div> 
                     </a>
 
-                    <nav>
+                    <div className="burger">
+                        <Hamburger color="#fff" toggled={isOpen} toggle={setOpen}/>
+                    </div>
+
+                    <nav className="desktop">
                         <a><span>Início</span></a>
                         <a><span>Nossa História</span></a>
-                        <a><span >Empreendimentos</span></a>
+                        <a><span>Empreendimentos</span></a>
                         <a><span>Contato</span></a>
                     </nav>
+
+                    <Modal 
+                        isOpen={isOpen}
+                        onRequestClose={closeModal}
+                        contentLabel="Example Modal"
+                        className="modal"
+                        overlayClassName="overlay"
+                        closeTimeoutMS={200}
+                    >
+                        <nav>
+                            <a><span>Início</span></a>
+                            <a><span>Nossa História</span></a>
+                            <a><span>Empreendimentos</span></a>
+                            <a><span>Contato</span></a>
+                        </nav>
+                    </Modal>
+
                 </div>
             </header>
             <motion.div style={{ scaleX: scrollYProgress }}  className="progress-bar"/>

@@ -2,11 +2,29 @@
     header {
         padding:1rem 0;
     }
-    header nav {
+    header nav.desktop {
         display:none;
     }
-    header .content {
-        justify-content:center !important;
+
+    /* header nav {
+        background-color:var(--blue);
+        flex-direction:column;
+        position:fixed;
+        top:64px;
+        left:0;
+        width:100vw;
+        align-items:center;
+        display:flex;
+    }
+    header nav a {
+        flex:1;
+        padding:1rem 2rem;
+    }
+    header nav a span {
+        color:hsl(0, 0%, 80%);
+    } */
+    header .burger {
+        display:block;
     }
 }
 
@@ -20,5 +38,8 @@
     header .img {
         width:52px;
         height:52px;
+    }
+    .overlay {
+        top:68px;
     }
 }

@@ -17,7 +17,7 @@ import Footer from "./components/Footer";
 function App() {
 
   return (
-    <>
+    <div id="app">
 
       <Toaster/>
 
@@ -35,7 +35,7 @@ function App() {
 
       <Footer/>
 
-    </>
+    </div>
   )
 }
 
