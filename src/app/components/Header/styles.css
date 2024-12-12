@@ -1,24 +1,25 @@
 header {
-    width:100vw;
-    padding:1.5rem 0;
-    z-index:10001;
+    width: 100vw;
+    padding: 1.5rem 0;
+    z-index: 10001;
 }
 
 div.header-container {
-    transition:200ms;
-    background-color:var(--blue);
+    transition: 200ms;
+    background-color: var(--blue);
 }
 
 div.header-container.scroll-zero {
-    transition:200ms;
-    background:transparent !important;
+    transition: 200ms;
+    background: transparent !important;
 }
 
 div.header-container.scroll-zero header nav span {
-    color:hsl(0, 0%, 80%);
+    color: hsl(0, 0%, 80%);
 }
+
 div.header-container.scroll-zero header nav span:hover {
-    color:hsl(0, 0%, 52%);
+    color: #fff;
 }
 
 header a {
@@ -26,136 +27,174 @@ header a {
 }
 
 header div.content {
-    height:100%;
-    width:80%;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:10001;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10001;
 }
 
 div.logo {
-    height:fit-content;
-    display:flex;
-    gap:1rem;
+    height: fit-content;
+    display: flex;
+    gap: 1rem;
 }
 
 header .img {
-    position:relative;
-    width:74px;
-    height:74px;
+    position: relative;
+    width: 74px;
+    height: 74px;
     cursor: pointer;
 }
 
 header div.logo-text {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #fff;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 header div.logo-text span:first-child {
-    font-size:2.25rem;
-    font-weight:600;
-} 
+    font-size: 2.25rem;
+    font-weight: 600;
+}
 
 header div.logo-text span:last-child {
-    font-size:1rem;
-    letter-spacing:.1em;
+    font-size: 1rem;
+    letter-spacing: .1em;
 }
 
 header nav {
-    display:flex;
-    gap:1.75rem;
+    display: flex;
+    gap: 1.75rem;
 }
 
 header nav span {
-    font-size:1.125rem;
-    cursor:pointer;
-    color:hsl(0, 0%, 52%);
-    transition:200ms;
-    font-weight:400;
+    font-size: 1.125rem;
+    cursor: pointer;
+    color: hsl(0, 0%, 52%);
+    transition: 200ms;
+    font-weight: 400;
 }
 
 header nav span:hover {
-    color:hsl(0, 0%, 80%);
+    color: hsl(0, 0%, 80%);
 }
 
 header nav span.active {
-    color:#fff;
-    font-weight:600;
+    color: #fff;
+    font-weight: 600;
 }
 
 .progress-bar {
-    background-color:#fff;
-    width:100%;
-    height:1px;
+    background-color: #fff;
+    width: 100%;
+    height: 1px;
 }
 
 .header-container {
-    display:flex;
-    flex-direction:column;
-    z-index:9;
-    position:fixed;
-    top:0;
-    align-items:start;
+    display: flex;
+    flex-direction: column;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    align-items: start;
 }
 
 header .burger {
-    display:none;
+    display: none;
 }
 
 .modal {
-    width:100vw;
-    background-color:var(--blue);
+    width: 100vw;
+    background-color: var(--blue);
 }
 
 .modal nav {
-    color:hsl(0, 0%, 80%);
-    display:flex;
-    flex-direction:column;
-    gap:2rem;
+    color: hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
-    padding:2rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .modal nav a {
-    transition:200ms;
-    cursor:pointer;
-    flex:1;
-    font-size:1.25rem;
+    transition: 200ms;
+    cursor: pointer;
+    flex: 1;
+    font-size: 1.25rem;
 }
 
 .modal nav a:hover {
-    transition:200ms;
-    color:#fff;
+    transition: 200ms;
+    color: #fff;
 }
 
 .overlay {
-    z-index:1000;
+    z-index: 1000;
     position: fixed;
-    top:105px;
-    left:0;
-    height:100vh;
-    width:100vw;
+    top: 105px;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
 .ReactModal__Overlay {
     transform: translateY(-25px);
-    opacity:0;
+    opacity: 0;
     transition: 200ms ease-in-out;
 }
 
-.ReactModal__Overlay--after-open{
+.ReactModal__Overlay--after-open {
     transition: 200ms ease-in-out;
-    opacity:1;
+    opacity: 1;
     transform: translateY(0px);
 }
 
-.ReactModal__Overlay--before-close{
+.ReactModal__Overlay--before-close {
     transition: 200ms ease-in-out;
-    opacity:0;
+    opacity: 0;
     transform: translateY(-25px);
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 80%);
+    transform-origin: bottom right;
+    transition: transform 200ms ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: #fff;
+}
+
+.desktop .hover-underline-animation::after {
+    background-color:hsl(0, 0%, 52%);
+}
+.desktop .hover-underline-animation:hover::after {
+    background-color:hsl(0, 0%, 80%);
+}
+
+.scroll-zero .desktop .hover-underline-animation::after {
+    background-color:hsl(0, 0%, 80%);
+}
+.scroll-zero .desktop .hover-underline-animation:hover::after {
+    background-color:#fff;
 }

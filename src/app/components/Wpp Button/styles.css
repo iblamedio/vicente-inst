@@ -6,7 +6,7 @@ div.wpp a {
     display:flex;
     align-items:center;
     cursor:pointer;
-    z-index:999;
+    z-index:10005;
 }
 
 div.wpp a:hover {

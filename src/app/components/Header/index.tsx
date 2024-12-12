@@ -54,25 +54,24 @@ export default function Header() {
                     </div>
 
                     <nav className="desktop">
-                        <a><span>Início</span></a>
-                        <a><span>Nossa História</span></a>
-                        <a><span>Empreendimentos</span></a>
-                        <a><span>Contato</span></a>
+                        <a className="hover-underline-animation"><span>Início</span></a>
+                        <a className="hover-underline-animation"><span>Nossa História</span></a>
+                        <a className="hover-underline-animation"><span>Empreendimentos</span></a>
+                        <a className="hover-underline-animation"><span>Contato</span></a>
                     </nav>
 
                     <Modal 
                         isOpen={isOpen}
                         onRequestClose={closeModal}
-                        contentLabel="Example Modal"
                         className="modal"
                         overlayClassName="overlay"
                         closeTimeoutMS={200}
                     >
                         <nav>
-                            <a><span>Início</span></a>
-                            <a><span>Nossa História</span></a>
-                            <a><span>Empreendimentos</span></a>
-                            <a><span>Contato</span></a>
+                            <a className="hover-underline-animation"><span>Início</span></a>
+                            <a className="hover-underline-animation"><span>Nossa História</span></a>
+                            <a className="hover-underline-animation"><span>Empreendimentos</span></a>
+                            <a className="hover-underline-animation"><span>Contato</span></a>
                         </nav>
                     </Modal>
 
