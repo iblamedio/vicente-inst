@@ -2,6 +2,7 @@ import './styles.css';
 
 import vicenteLogoWhite from '../../../../public/assets/vicente-logo-white.svg';
 import instagramLogo from '../../../../public/assets/instagram.svg';
+import linkedinLogo from '../../../../public/assets/linkedin.svg';
 import Image from 'next/image';
 
 export default function Footer () {
@@ -9,15 +10,17 @@ export default function Footer () {
         <section className="footer">
         <div className="content">
           <div className="primary-info">
-            <div className="logo">
-              <div className="img">
-                <Image fill src={vicenteLogoWhite.src} alt="A. Vicente" />
+            <a href="/">
+              <div className="logo">
+                <div className="img">
+                  <Image fill src={vicenteLogoWhite.src} alt="A. Vicente" />
+                </div>
+                <div className="logo-text">
+                    <span>AVICENTE</span>
+                    <span>EMPREENDIMENTOS</span>
+                </div>
               </div>
-              <div className="logo-text">
-                  <span>AVICENTE</span>
-                  <span>EMPREENDIMENTOS</span>
-              </div>
-            </div>
+            </a>            
             <div className="address">
               <span>Rua 262, 270</span>
               <span>Meia Praia - Itapema - SC</span>
@@ -27,15 +30,24 @@ export default function Footer () {
           <div className="secondary-info">
             <div className="social">
               <h4>Redes Sociais</h4>
-              <a href="https://www.instagram.com/avicenteempreendimentos/"><Image src={instagramLogo} alt="Instagram" /></a>
+              <div className="socials">
+                <a className="social-link" href="https://www.instagram.com/avicenteempreendimentos/">
+                  <Image src={instagramLogo} alt="Instagram" />
+                  <span>@avicenteempreendimentos</span>
+                </a>
+                <a className="social-link" href="https://www.linkedin.com/company/avemp">
+                <div className="icon">
+                  <Image fill src={linkedinLogo} alt="Linkedin" />
+                </div>
+                  <span>AVicente Empreendimentos</span>
+                </a>
+              </div>              
             </div>
             <div className="menu">
               <h4>Menu</h4>
               <div className="items">
-                <a href="#inicio">Início</a>
-                <a href="#nossa-historia">Nossa História</a>
-                <a href="#empreendimentos">Empreendimentos</a>
-                <a href="#contato">Contato</a>
+                <a href="/">Início</a>
+                <a href="/blog">Blog</a>
               </div>
             </div>
           </div>

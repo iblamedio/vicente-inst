@@ -1,3 +1,5 @@
+"use client"
+
 import { motion, useScroll } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { Squash as Hamburger } from 'hamburger-react'
@@ -8,6 +10,7 @@ import './header-mobile.css'
 
 import vicenteLogo from '../../../../public/assets/vicente-logo-white.svg';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
 
@@ -33,11 +36,11 @@ export default function Header() {
 
     return (
         <div className={
-            scrollPosState !== 0 || isOpen ? "header-container" : "header-container scroll-zero"
+            (scrollPosState !== 0 || isOpen) ? "header-container" : (usePathname() === "/" ? "header-container scroll-zero" : "header-container")
         }>
             <header>
                 <div className="content">
-                    <a href="#inicio">
+                    <a href="/">
                         <div className="logo">
                             <div className="img">
                                 <Image fill src={vicenteLogo.src} alt="A. Vicente" />
@@ -54,10 +57,8 @@ export default function Header() {
                     </div>
 
                     <nav className="desktop">
-                        <a className="hover-underline-animation"><span>Início</span></a>
-                        <a className="hover-underline-animation"><span>Nossa História</span></a>
-                        <a className="hover-underline-animation"><span>Empreendimentos</span></a>
-                        <a className="hover-underline-animation"><span>Contato</span></a>
+                        <a href="/" className="hover-underline-animation"><span>Início</span></a>
+                        <a href="/blog" className="hover-underline-animation"><span>Blog</span></a>
                     </nav>
 
                     <Modal 
@@ -66,12 +67,11 @@ export default function Header() {
                         className="modal"
                         overlayClassName="overlay"
                         closeTimeoutMS={200}
+                        ariaHideApp={false}
                     >
                         <nav>
-                            <a className="hover-underline-animation"><span>Início</span></a>
-                            <a className="hover-underline-animation"><span>Nossa História</span></a>
-                            <a className="hover-underline-animation"><span>Empreendimentos</span></a>
-                            <a className="hover-underline-animation"><span>Contato</span></a>
+                            <a href="/" className="hover-underline-animation"><span>Início</span></a>
+                            <a href="/blog" className="hover-underline-animation"><span>Blog</span></a>
                         </nav>
                     </Modal>
 

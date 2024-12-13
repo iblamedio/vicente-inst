@@ -1,4 +1,8 @@
 import { type Metadata } from "next";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import '../styles/globals.css';
 
 export const metadata: Metadata = {
   title: "AVicente Empreendimentos",
@@ -9,8 +13,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html suppressHydrationWarning>
+      <body id="app" suppressHydrationWarning>
+        <Header/>
+        <main>{ children }</main>
+        <Footer/>
+      </body>
     </html>
   );
 }

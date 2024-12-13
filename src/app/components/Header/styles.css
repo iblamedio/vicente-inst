@@ -1,12 +1,14 @@
 header {
     width: 100vw;
     padding: 1.5rem 0;
-    z-index: 10001;
+    z-index: 100001;
 }
 
 div.header-container {
     transition: 200ms;
     background-color: var(--blue);
+    z-index: 100000;
+    position: fixed;
 }
 
 div.header-container.scroll-zero {
@@ -98,8 +100,6 @@ header nav span.active {
 .header-container {
     display: flex;
     flex-direction: column;
-    z-index: 9;
-    position: fixed;
     top: 0;
     align-items: start;
 }
@@ -114,7 +114,6 @@ header .burger {
 }
 
 .modal nav {
-    color: hsl(0, 0%, 80%);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -123,10 +122,12 @@ header .burger {
 }
 
 .modal nav a {
+    color: hsl(0, 0%, 80%);
     transition: 200ms;
     cursor: pointer;
     flex: 1;
     font-size: 1.25rem;
+    text-decoration:none;
 }
 
 .modal nav a:hover {

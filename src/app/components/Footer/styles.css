@@ -1,15 +1,19 @@
 section.footer {
     background-color: var(--blue);
-    padding-top: 5rem;
+    padding: 5rem 0;
 }
 
 section.footer div.content {
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 4rem;
+}
+
+section.footer div.content div.primary-info a {
+    text-decoration:none;
 }
 
 section.footer div.logo {
@@ -32,6 +36,7 @@ section.footer div.logo-text {
 
 section.footer div.logo-text span {
     color: #fff !important;
+    text-decoration:none !important;
 }
 
 section.footer div.logo-text span:first-child {
@@ -83,8 +88,7 @@ section.footer .mail {
 section.footer .secondary-info {
     display: flex;
     gap: 5rem;
-    text-wrap: nowrap;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 section.footer .secondary-info .img {
@@ -96,12 +100,30 @@ section.footer .menu .items {
     flex-direction: column;
 }
 
-section.footer a {
+section.footer .secondary-info a {
     color: hsl(0, 0%, 80%);
     text-decoration: none;
     font-size: 1rem;
 }
 
-section.footer a:hover {
+section.footer .secondary-info a:hover {
     text-decoration: underline;
+}
+
+section.footer .social-link {
+    display:flex;
+    align-items:center;
+    gap:.25rem;
+}
+
+section.footer .icon {
+    height:20px;
+    width:20px;
+    position:relative;
+}
+
+section.footer .socials {
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
 }
