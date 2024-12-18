@@ -12,19 +12,29 @@ import vicenteLogo from '../../../../public/assets/vicente-logo-white.svg';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
+import expand from '../../../../public/assets/expand.svg';
+import EmpDropdown from './EmpDropdown';
+
 export default function Header() {
 
     Modal.setAppElement('#app');
 
     const { scrollYProgress } = useScroll();
-
     const [scrollPosState, setScrollPosState] = useState(0);
-
     const [isOpen, setOpen] = useState(false);
-
     const closeModal = () => setOpen(false);
+    const pathname = usePathname();
+    const [showDropdown, setDropdown] = useState(false);
 
-    useEffect (()=>{
+    const handleMouseEnter = () => {
+        setDropdown(true);
+    };
+
+    const handleMouseLeave = () => {
+        setDropdown(false);
+    };
+
+    useEffect(() => {
 
         document.addEventListener("scroll", () => {
             const scrollPos = document.scrollingElement?.scrollTop ?? 0;
@@ -32,11 +42,11 @@ export default function Header() {
             setScrollPosState(scrollPos);
         });
 
-    },[]);
+    }, []);
 
     return (
         <div className={
-            (scrollPosState !== 0 || isOpen) ? "header-container" : (usePathname() === "/" ? "header-container scroll-zero" : "header-container")
+            (scrollPosState !== 0 || isOpen) ? "header-container" : (pathname === "/" ? "header-container scroll-zero" : "header-container")
         }>
             <header>
                 <div className="content">
@@ -49,19 +59,39 @@ export default function Header() {
                                 <span>AVICENTE</span>
                                 <span>EMPREENDIMENTOS</span>
                             </div>
-                        </div> 
+                        </div>
                     </a>
 
                     <div className="burger">
-                        <Hamburger color="#fff" toggled={isOpen} toggle={setOpen}/>
+                        <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
                     </div>
 
-                    <nav className="desktop">
-                        <a href="/" className="hover-underline-animation"><span>Início</span></a>
-                        <a href="/blog" className="hover-underline-animation"><span>Blog</span></a>
+                    <nav className="desktop" suppressHydrationWarning >
+                        <a inert={pathname === "/"} href="/" className="hover-underline-animation">
+                            <span className={pathname === "/" ? "active" : ""}>Início</span>
+                        </a>
+
+                        <div 
+                            className="header-empreendimentos-container" 
+                            onMouseEnter={handleMouseEnter} 
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <a className="hover-underline-animation header-empreendimentos">
+                                <span className={pathname === "/blog" ? "active" : ""}>
+                                    Empreendimentos
+                                    <Image src={expand} alt="Expandir" width={12} height={12} />
+                                </span>
+                            </a>
+                            { showDropdown && <EmpDropdown mobile={false} /> }
+                        </div>
+
+
+                        <a inert={pathname === "/blog"} href="/blog" className="hover-underline-animation">
+                            <span className={pathname === "/blog" ? "active" : ""}>Blog</span>
+                        </a>
                     </nav>
 
-                    <Modal 
+                    <Modal
                         isOpen={isOpen}
                         onRequestClose={closeModal}
                         className="modal"
@@ -69,15 +99,31 @@ export default function Header() {
                         closeTimeoutMS={200}
                         ariaHideApp={false}
                     >
-                        <nav>
-                            <a href="/" className="hover-underline-animation"><span>Início</span></a>
-                            <a href="/blog" className="hover-underline-animation"><span>Blog</span></a>
+                        <nav suppressHydrationWarning >
+                            <a inert={pathname === "/"} href="/" className="hover-underline-animation">
+                                <span className={pathname === "/" ? "active" : ""}>Início</span>
+                            </a>
+
+                            <div className="header-empreendimentos-container">
+                                <a className="hover-underline-animation header-empreendimentos">
+                                    <span className={pathname === "/blog" ? "active" : ""}>
+                                        Empreendimentos
+                                        <Image src={expand} alt="Expandir" width={12} height={12} />
+                                    </span>
+                                </a>
+                                <EmpDropdown mobile/>
+                            </div>
+
+
+                            <a inert={pathname === "/blog"} href="/blog" className="hover-underline-animation">
+                                <span className={pathname === "/blog" ? "active" : ""}>Blog</span>
+                            </a>
                         </nav>
                     </Modal>
 
                 </div>
             </header>
-            <motion.div style={{ scaleX: scrollYProgress }}  className="progress-bar"/>
+            <motion.div style={{ scaleX: scrollYProgress }} className="progress-bar" />
         </div>
     )
 }

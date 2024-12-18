@@ -1,95 +1,83 @@
-section.third {
-    width: 100vw;
-    padding: 11.25rem 0;
-    color: #fff;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 3.25rem;
+section.empreendimentos {
+    background: linear-gradient(to bottom, var(--blue), hsl(206, 100%, 20%));
+    padding:7rem 0;
+    display:flex;
+    flex-direction:column;
+    gap:6rem;
+    align-items:center;
 }
 
-section.third .card {
-    background: linear-gradient(to left, var(--blue), hsl(206, 100%, 20%));
-    width: 60%;
-    padding-top: 2rem;
+section.empreendimentos h1 {
+    color:#fff;
+    margin:0;
+    text-align:center;
+    font-size:2rem;
 }
 
-section.third .card-content {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 3.5rem 0;
+section.empreendimentos div.empreendimentos-content {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:3rem;
+    flex-wrap:wrap;
+    align-content:center;
 }
 
-section.third .card-seal {
-    background-color: hsl(0, 0%, 80%);
-    color: var(--blue);
-    width: fit-content;
-    padding: .5rem 1.5rem .5rem 8rem;
-    font-size: 1.25rem;
-    border-radius: 0px 5px 5px 0px;
+section.empreendimentos div.empreendimentos-content div.emp-card:nth-child(even) {
+    height:580px;
+    width:500px;
 }
 
-section.third .card-seal span {
-    font-weight: 600;
-}
-
-section.third .card:nth-child(2) {
-    flex-direction: row-reverse;
-    margin-left: auto;
-}
-
-section.third .img {
-    position: relative;
-    width: 270px;
-    height: 335px;
-}
-
-section.third .card:nth-child(1) img {
-    box-shadow: -86px -81px 0px -69px hsl(0, 0%, 52%);
-}
-
-section.third .card:nth-child(2) img {
-    box-shadow: -56px 50px 0px -34px hsl(0, 0%, 52%);
-}
-
-section.third .card:nth-child(3) img {
-    box-shadow: 89px 85px 0px -76px hsl(0, 0%, 52%);
-}
-
-section.third h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin: 0;
-    line-height: 2em;
-}
-
-section.third .text p {
-    max-width: 35ch;
-    text-wrap: balance;
-    margin: 0;
-    font-weight: 400;
-    color: hsl(0, 0%, 80%);
-    font-size: 1.125rem;
-}
-
-section.third button {
-    transition: 200ms;
-    margin-top: 1.5em;
-    color: var(--blue);
-    font-weight: 600;
-    font-size: 1.25rem;
-    font-family: 'Outfit';
-    background-color: #fff;
-    outline: none;
-    border: none;
-    border-radius: 30px;
-    padding: 1rem 5rem;
+section.empreendimentos div.emp-card {
+    position:relative;
+    transition:200ms;
+    display:grid;
+    border-bottom:5px solid hsl(206, 100%, 30%);
     cursor: pointer;
-    box-shadow: 0px 5px 0px var(--blue);
+    width:450px;
+    height:540px;
 }
 
-section.third button:hover {
-    transition: 200ms;
-    transform: translateY(-4px);
+section.empreendimentos div.emp-card:hover {
+    transition:200ms;
+    scale:1.05;
+}
+
+section.empreendimentos div.emp-overlay {
+    grid-area:1/1;
+    z-index:10;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:flex-end;
+    padding:1.75rem;
+}
+
+section.empreendimentos div.emp-overlay-text {
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+section.empreendimentos div.emp-open-icon {
+    position:relative;
+    width:2rem;
+    height:2rem;
+}
+
+section.empreendimentos  h2 {
+    margin:0;
+    color:#fff;
+}
+
+section.empreendimentos .emp-card:hover .emp-image {
+    transition:200ms;
+    filter:grayscale(0%);
+}
+
+section.empreendimentos .emp-image {
+    transition:200ms;
+    filter:grayscale(100%);
 }

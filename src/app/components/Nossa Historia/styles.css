@@ -17,7 +17,7 @@ section.second div.photo-container {
 }
 
 section.second .photo-container {
-    background-color: var(--blue);
+    background: linear-gradient(to right, var(--blue), hsl(206, 100%, 20%));
 }
 
 section.second .text-container {

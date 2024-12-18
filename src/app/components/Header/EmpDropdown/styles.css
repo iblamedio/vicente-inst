@@ -1,0 +1,26 @@
+.emp-dropdown {
+    width:100%;
+    background-color:var(--blue);
+    position:absolute;
+    bottom:-130px;
+}
+
+.scroll-zero .emp-dropdown {
+    background-color:#00000086 !important;
+}
+
+.emp-dropdown a span {
+    font-size:1rem !important;
+    line-height:2.8em;
+    padding:0 .5rem;
+    width:100%;
+}
+
+.emp-dropdown.mobile {
+    width:100vw;
+    position:static
+}
+
+.emp-dropdown.mobile a span {
+    text-align:center;
+}

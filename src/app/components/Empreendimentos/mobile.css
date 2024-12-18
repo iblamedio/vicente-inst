@@ -1,0 +1,6 @@
+@media (max-width:1807px) {
+    section.empreendimentos div.empreendimentos-content div.emp-card:nth-child(even) {
+        height:540px;
+        width:450px;
+    }
+}
