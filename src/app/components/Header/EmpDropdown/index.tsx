@@ -14,13 +14,13 @@ export default function EmpDropdown ({ mobile }: Props) {
                 initial={{ opacity: 0, y: -25 }}
                 whileInView={{ y: 0, opacity: 1 }}
             >
-                <a href="">
+                <a href="/empreendimentos/em-construcao">
                     <span className='hover-underline-animation'>Em construção</span>
                 </a>
-                <a href="">
+                <a href="/empreendimentos/entregues">
                     <span className='hover-underline-animation'>Entregues</span>
                 </a>
-                <a href="">
+                <a href="/empreendimentos/pre-lancamentos">
                     <span className='hover-underline-animation'>Pré Lançamentos</span>
                 </a>
             </motion.div>
@@ -28,7 +28,7 @@ export default function EmpDropdown ({ mobile }: Props) {
     } else {
         return (
             <div className="emp-dropdown mobile">
-                <a href="">
+                <a href="/empreendimentos/em-construcao">
                     <span className='hover-underline-animation'>Em construção</span>
                 </a>
                 <a href="">

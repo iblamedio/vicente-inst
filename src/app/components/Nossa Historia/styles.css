@@ -24,6 +24,7 @@ section.second .text-container {
     color: var(--blue);
     display: flex;
     justify-content: center;
+    padding-left:5vw;
 }
 
 section.second .text-container .text-content {

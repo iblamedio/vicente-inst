@@ -8,7 +8,7 @@ export default function Blog () {
     return (
         <section className="blog">
             <WppButton/>
-            <h1>Teste</h1>
+            <h1>.</h1>
             <FormSection/>
         </section>
     )

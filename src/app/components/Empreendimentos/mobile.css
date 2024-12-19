@@ -4,3 +4,17 @@
         width:450px;
     }
 }
+
+@media (max-width:500px) {
+    section.empreendimentos div.empreendimentos-content div.emp-card {
+        height: 372px !important;
+        width: 310px !important;
+    }
+}
+
+@media (max-width:320px) {
+    section.empreendimentos div.empreendimentos-content div.emp-card {
+        height: 312px !important;
+        width: 260px !important;
+    }
+} 

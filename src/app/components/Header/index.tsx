@@ -77,7 +77,7 @@ export default function Header() {
                             onMouseLeave={handleMouseLeave}
                         >
                             <a className="hover-underline-animation header-empreendimentos">
-                                <span className={pathname === "/blog" ? "active" : ""}>
+                                <span className={pathname.includes("empreendimentos") ? "active" : ""}>
                                     Empreendimentos
                                     <Image src={expand} alt="Expandir" width={12} height={12} />
                                 </span>
@@ -106,7 +106,7 @@ export default function Header() {
 
                             <div className="header-empreendimentos-container">
                                 <a className="hover-underline-animation header-empreendimentos">
-                                    <span className={pathname === "/blog" ? "active" : ""}>
+                                    <span className={pathname.includes("empreendimentos") ? "active" : ""}>
                                         Empreendimentos
                                         <Image src={expand} alt="Expandir" width={12} height={12} />
                                     </span>

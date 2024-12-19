@@ -1,0 +1,30 @@
+.video-section {
+    padding:8rem 10vw;
+    display:flex;
+    justify-content:center;
+    gap:2rem;
+    background:linear-gradient(to bottom, hsl(206, 100%, 20%) 50%, #fff 50%);
+    flex-wrap: wrap-reverse;
+}
+
+.video-section h1 {
+    margin:0;
+    line-height:1.4em;
+    font-size:2rem;
+    color:#fff;
+    font-weight:600;
+}
+
+.video-section p {
+    width:30ch;
+    font-weight: 300;
+    color:hsl(0, 0%, 80%);
+    font-size:1.25rem;
+    margin:0;
+}
+
+.video-section iframe {
+    border:none;
+    outline:none;
+    aspect-ratio:16/9;
+}

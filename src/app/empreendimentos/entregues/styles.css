@@ -1,0 +1,63 @@
+.emp-catalog {
+    padding:11rem 10vw;
+}
+
+.emp-catalog h1 {
+    font-size:2rem;
+    background: linear-gradient(to right, var(--blue), hsl(206, 100%, 30%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position:relative;
+    width:fit-content;
+}
+
+.emp-catalog h1::after {
+    content:'';
+    position:absolute;
+    height:2px;
+    width:150%;
+    background: linear-gradient(to left, var(--blue), hsl(206, 100%, 30%));
+    bottom: 0;
+    left: 0;
+}
+
+.emp-catalog h4 {
+    margin:0;
+    color: var(--blue);
+    font-size:1.5rem;
+    font-weight:600;
+    line-height:1.4em;
+}
+
+.emp-catalog span {
+    font-size:1rem;
+    color:hsl(0, 0%, 80%);
+    font-weight: 300;
+}
+
+.emp-catalog .catalog-card {
+    transition:200ms;
+    width:fit-content;
+    cursor:pointer;
+}
+
+.emp-catalog .catalog-card > img {
+    border-radius:5px;
+    margin-bottom:2px;
+}
+
+.emp-catalog .catalog-card:hover {
+    transition:200ms;
+    scale:1.015;
+}
+
+.emp-catalog .cat-legend {
+    display:flex;
+    justify-content:space-between;
+}
+
+.emp-catalog .catalog-container {
+    display:flex;
+    gap:2rem;
+}

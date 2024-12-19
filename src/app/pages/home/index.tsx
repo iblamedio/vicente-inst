@@ -10,6 +10,8 @@ import Inicio from '../../components/Inicio';
 import NossaHistoria from '../../components/Nossa Historia';
 import FormSection from '../../components/Form Section';
 import Empreendimentos from "../../components/Empreendimentos";
+import Video from "~/app/components/Video";
+import Equipe from "~/app/components/Equipe";
 
 
 function App() {
@@ -26,6 +28,10 @@ function App() {
       <NossaHistoria/>
 
       <Empreendimentos/>
+
+      <Video/>
+
+      <Equipe/>
 
       <FormSection/>
 
