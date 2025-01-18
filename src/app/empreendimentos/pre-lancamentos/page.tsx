@@ -1,4 +1,5 @@
 import './styles.css';
+import './mobile.css';
 
 import placeholder from '../../../../public/assets/placeholder-building.webp';
 import Image from 'next/image';

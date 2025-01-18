@@ -1,4 +1,5 @@
 import './styles.css';
+import './mobile.css';
 
 import mariaDolores from '../../../../public/assets/mariadolores.webp';
 import Image from 'next/image';

@@ -100,6 +100,7 @@ nav span {
 nav span img {
     transition:200ms;
     filter: invert(67%) sepia(0%) saturate(1103%) hue-rotate(168deg) brightness(79%) contrast(81%);
+    transform: rotateZ(-90deg);
 }
 
 
@@ -120,6 +121,7 @@ nav a span.active {
 
 nav span.active img {
     filter: invert(95%) sepia(18%) saturate(1%) hue-rotate(35deg) brightness(108%) contrast(100%) !important;
+    transform: rotateZ(0deg);
 }
 
 .progress-bar {

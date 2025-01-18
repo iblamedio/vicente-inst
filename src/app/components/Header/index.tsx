@@ -26,6 +26,12 @@ export default function Header() {
     const pathname = usePathname();
     const [showDropdown, setDropdown] = useState(false);
 
+    const [mobIsOpen, setMobIsOpen] = useState(pathname.includes("empreendimentos"));
+
+    const handleMobClick = () => {
+        setMobIsOpen(!mobIsOpen);
+    }
+
     const handleMouseEnter = () => {
         setDropdown(true);
     };
@@ -105,13 +111,13 @@ export default function Header() {
                             </a>
 
                             <div className="header-empreendimentos-container">
-                                <a className="hover-underline-animation header-empreendimentos">
-                                    <span className={pathname.includes("empreendimentos") ? "active" : ""}>
+                                <a className="hover-underline-animation header-empreendimentos" onClick={() => handleMobClick()}>
+                                    <span className={mobIsOpen ? "active" : ""}>
                                         Empreendimentos
                                         <Image src={expand} alt="Expandir" width={12} height={12} />
                                     </span>
                                 </a>
-                                <EmpDropdown mobile/>
+                                { mobIsOpen ? <EmpDropdown mobile/> : <></> }
                             </div>
 
 

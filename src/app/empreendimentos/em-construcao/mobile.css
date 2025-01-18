@@ -1,0 +1,8 @@
+@media (max-width:668px) {
+    .emp-catalog .catalog-container {
+        justify-content:center;
+    }
+    .emp-catalog {
+        padding:5rem 0;
+    }
+}

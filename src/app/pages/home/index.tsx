@@ -13,11 +13,15 @@ import Empreendimentos from "../../components/Empreendimentos";
 import Video from "~/app/components/Video";
 import Equipe from "~/app/components/Equipe";
 
+import Debug from "~/app/components/Debug";
+
 
 function App() {
 
   return (
     <div>
+
+      <Debug/>
 
       <Toaster/>
 

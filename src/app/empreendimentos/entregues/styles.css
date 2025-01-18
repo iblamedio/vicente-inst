@@ -1,5 +1,7 @@
 .emp-catalog {
-    padding:11rem 10vw;
+    padding:11rem 0;
+    margin:auto;
+    width:90%;
 }
 
 .emp-catalog h1 {
@@ -60,4 +62,5 @@
 .emp-catalog .catalog-container {
     display:flex;
     gap:2rem;
+    flex-wrap:wrap;
 }
