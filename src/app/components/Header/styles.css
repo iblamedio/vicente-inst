@@ -92,7 +92,7 @@ nav span {
     transition: 200ms;
     font-weight: 400;
     display:flex;
-    gap:0.25rem;
+    gap:0.45rem;
     align-items:center;
     margin:auto;
 }
@@ -111,6 +111,17 @@ nav span:hover {
 nav span:hover img {
     transition:200ms;
     filter:invert(100%) sepia(15%) saturate(0%) hue-rotate(122deg) brightness(91%) contrast(73%);
+    transform:rotate(0);
+}
+
+nav .span-hover {
+    color: hsl(0, 0%, 80%);
+}
+
+nav .span-hover img {
+    transition:200ms;
+    filter:invert(100%) sepia(15%) saturate(0%) hue-rotate(122deg) brightness(91%) contrast(73%);
+    transform:rotate(0);
 }
 
 nav span.active,

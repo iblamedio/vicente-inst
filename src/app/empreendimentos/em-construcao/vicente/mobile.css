@@ -1,0 +1,42 @@
+@media (max-width:620px) {
+    .vicente-first h1 {
+        font-size:2rem;
+        flex-direction:column;
+    }
+    .vicente-first-content > img {
+        width:100%;
+        height:auto;
+    }
+    .vicente-second-pic {
+        min-width: 0;
+        width:100%;
+    }
+    .vicente-second-content > img {
+        width:90%;
+        height:auto;
+        margin-top:2rem;
+    }
+    .vicente-third img {
+        width:85%;
+    }
+    .vicente-fourth img {
+        min-width: 0;
+        width:90%;
+    }
+}
+
+@media (max-width:870px) {
+    .vicente-fifth {
+        flex-direction:column-reverse;
+    }
+    .vicente-fifth img {
+        width:100vw;
+    }
+    .vicente-fifth .map {
+        width:100vw;
+        height:800px;
+    }
+    .vicente-fifth .map-legend-content {
+        font-size:1.25rem;
+    }
+}

@@ -1,0 +1,194 @@
+.vicente-container {
+    padding-top:7rem;
+    background: linear-gradient(360deg, #FFFFFF 96%, var(--blue) 96%);
+}
+
+.vicente-first-content {
+    width:80%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    flex-wrap:wrap;
+}
+
+.vicente-first img {
+    border-radius:.25rem;
+}
+
+.vicente-first h1 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 22px;
+    color: #00213A;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin:0;
+    margin:50px 0;
+    text-wrap:nowrap;
+    flex-wrap: wrap;
+}
+
+.vicente-first p {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color:var(--blue);
+    max-width:40ch;
+    text-wrap:wrap;
+}
+
+.vicente-second {
+    margin-top:12rem;
+    display:flex;
+    flex-wrap:wrap-reverse;
+}
+
+.vicente-second-content {
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    align-content: center;
+    padding-bottom:4rem;
+}
+
+.vicente-second-pic {
+    width:40vw;
+    min-width:645px;
+    height:auto;
+}
+
+.second-icons {
+    display:flex;
+    flex-wrap:wrap;
+    width:50%;
+    gap:.5rem;
+}
+
+.vicente-icon {
+    border-width: 2px 2px 8px 2px;
+    border-style: solid;
+    border-color: #26ACC4;
+    border-radius: .5rem;
+    color:#26ACC4;
+    display:flex;
+    flex-direction:column;
+    font-size:1.5rem;
+    padding:1rem;
+    flex:1;
+    background:#fff;
+    transition:200ms;
+}
+
+.vicente-icon:hover {
+    transition:200ms;
+    transform:translateY(-4px);
+    background:hsl(0, 0%, 95%)
+}
+
+.vicente-third {
+    background: linear-gradient(0deg, rgba(67, 196, 219, 0) 50%, #43C4DB 100%);
+    display:flex;
+    justify-content:center;
+}
+
+.vicente-third img {
+    width:65%;
+    height:auto;
+    margin:auto;
+    padding:10rem 0;
+    transition:200ms;
+}
+
+.vicente-third img:hover {
+    transition:200ms;
+    transform: scale(1.01);
+}
+
+.vicente-fourth {
+    display:flex;
+    justify-content:center;
+    gap:2rem;
+    padding-bottom:20rem;
+    flex-wrap:wrap;
+}
+
+.vicente-fourth img {
+    width:35%;
+    height:auto;
+    min-width: 400px;
+}
+
+.vicente-fourth .fourth-text {
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+.vicente-fourth h1 {
+    font-size:6rem;
+    font-weight:400;
+    margin:0;
+    line-height:.5em;
+    color:var(--blue);
+}
+
+.vicente-fourth h1 > span {
+    font-size:14rem;
+    line-height:1em;
+    color:#26ACC4;
+}
+
+.vicente-fourth p {
+    color:var(--blue);
+    font-size:1.75rem;
+}
+
+.vicente-fifth {
+    display:flex;
+}
+
+.vicente-fifth img {
+    width:50vw;
+    height:auto;
+}
+
+.vicente-fifth .map {
+    height:auto;
+    width:50vw;
+    position:relative;
+    min-width:420px;
+}
+
+.vicente-fifth .map-legend {
+    width:100%;
+    height:20%;
+    position:absolute;
+    top:0;
+    background-color:var(--blue);
+    z-index:999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.vicente-fifth .map-legend-content {
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    width:70%;
+    margin:auto;
+    height:100%;
+    font-size:1.75rem;
+}
+
+.vicente-fifth .map-legend .map-legend-content > h4 {
+    margin:0;
+}

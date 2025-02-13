@@ -15,7 +15,7 @@ export default function EmConstrucao() {
             <h1 className="noselect">Em Construção</h1>
 
             <div className="catalog-container">
-                <div className="catalog-card">
+                <a href="https://aruna.avempreendimentos.com.br" className="catalog-card">
                     <Image src={arunaFoto} alt="Aruna Tower" width={285} height={355} />
                     <div className="cat-legend">
                         <div className="cat-text">
@@ -24,9 +24,9 @@ export default function EmConstrucao() {
                         </div>
                         <Image src={arunaLogo} alt="Aruna Tower" width={55} height={55}/>
                     </div>
-                </div>
+                </a>
 
-                <div className="catalog-card">
+                <a href="/empreendimentos/em-construcao/vicente" className="catalog-card">
                     <Image src={vicenteFoto} alt="Vicente Residencial" width={285} height={355} />
                     <div className="cat-legend">
                         <div className="cat-text">
@@ -35,7 +35,7 @@ export default function EmConstrucao() {
                         </div>
                         <Image src={vicenteLogo} alt="Vicente Residencial" width={55} height={55}/>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
     )

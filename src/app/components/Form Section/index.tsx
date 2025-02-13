@@ -167,7 +167,7 @@ export default function FormSection() {
 
       </div>
       <div className="map">
-        <MapComponent/>
+        <MapComponent lat={-27.13258075286012} lng={-48.60235724628996}/>
         
       </div>
 
