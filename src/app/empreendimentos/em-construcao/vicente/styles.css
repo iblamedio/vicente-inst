@@ -93,7 +93,7 @@
 }
 
 .vicente-third {
-    background: linear-gradient(0deg, rgba(67, 196, 219, 0) 50%, #43C4DB 100%);
+    background: #43C4DB;
     display:flex;
     justify-content:center;
 }
@@ -115,7 +115,7 @@
     display:flex;
     justify-content:center;
     gap:2rem;
-    padding-bottom:20rem;
+    padding:20rem 0;
     flex-wrap:wrap;
 }
 

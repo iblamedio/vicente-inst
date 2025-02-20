@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
 
-      <Debug/>
+      {/* <Debug/> */}
 
       <Toaster/>
 
@@ -33,9 +33,9 @@ function App() {
 
       <Empreendimentos/>
 
-      <Video/>
+      {/* <Video/> */}
 
-      <Equipe/>
+      {/* <Equipe/> */}
 
       <FormSection/>
 
