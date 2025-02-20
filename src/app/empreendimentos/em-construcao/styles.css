@@ -43,9 +43,10 @@
     width:fit-content;
     cursor:pointer;
     text-decoration:none;
+    position:relative;
 }
 
-.emp-catalog .catalog-card > img {
+.emp-catalog .catalog-card > img.card-photo {
     border-radius:5px;
     margin-bottom:2px;
 }
@@ -64,4 +65,11 @@
     display:flex;
     gap:2rem;
     flex-wrap:wrap;
+}
+
+.emp-catalog .sold-stamp {
+    position:absolute;
+    top:0;
+    right:25px;
+    opacity:0.9;
 }

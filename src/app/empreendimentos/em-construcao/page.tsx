@@ -8,6 +8,7 @@ import arunaLogo from '../../../../public/assets/aruna-logo.svg';
 import vicenteFoto from '../../../../public/assets/vicente.webp';
 import vicenteLogo from '../../../../public/assets/vicente-logo.png';
 
+import seloVendido from '../../../../public/assets/selo-vendido.svg';
 
 export default function EmConstrucao() {
     return (
@@ -27,7 +28,8 @@ export default function EmConstrucao() {
                 </a>
 
                 <a href="/empreendimentos/em-construcao/vicente" className="catalog-card">
-                    <Image src={vicenteFoto} alt="Vicente Residencial" width={285} height={355} />
+                    <Image src={vicenteFoto} alt="Vicente Residencial" width={285} height={355} className="card-photo" />
+                    <Image src={seloVendido} alt="100% Vendido" className="sold-stamp"/>
                     <div className="cat-legend">
                         <div className="cat-text">
                             <h4>Vicente Residencial</h4>
