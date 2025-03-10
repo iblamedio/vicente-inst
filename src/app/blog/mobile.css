@@ -1,0 +1,15 @@
+@media (max-width:1140px) {
+    div.blog-posts {
+        justify-content:center;
+    }
+}
+
+@media (max-width:450px) {
+    div.post-image {
+        width:256px;
+        height:144px;
+    }
+    .blog-post h4 {
+        width:20ch;
+    }
+}

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import './styles.css';
 import './mobile.css';
 
-import arunaFoto from '../../../../public/assets/aruna-fachada.webp';
+import arunaFoto from '../../../../public/assets/aruna-fachada-noturno.webp';
 import arunaLogo from '../../../../public/assets/aruna-logo.svg';
 
 import vicenteFoto from '../../../../public/assets/vicente.webp';

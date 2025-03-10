@@ -92,8 +92,8 @@ export default function Header() {
                         </div>
 
 
-                        <a inert={pathname === "/blog"} href="/blog" className="hover-underline-animation">
-                            <span className={pathname === "/blog" ? "active" : ""}>Blog</span>
+                        <a inert={pathname.includes("blog")} href="/blog" className="hover-underline-animation">
+                            <span className={pathname.includes("blog") ? "active" : ""}>Blog</span>
                         </a>
                     </nav>
 
@@ -121,8 +121,8 @@ export default function Header() {
                             </div>
 
 
-                            <a inert={pathname === "/blog"} href="/blog" className="hover-underline-animation">
-                                <span className={pathname === "/blog" ? "active" : ""}>Blog</span>
+                            <a inert={pathname.includes("blog")} href="/blog" className="hover-underline-animation">
+                                <span className={pathname.includes("blog") ? "active" : ""}>Blog</span>
                             </a>
                         </nav>
                     </Modal>
