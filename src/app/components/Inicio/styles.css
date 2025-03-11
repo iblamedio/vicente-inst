@@ -53,7 +53,6 @@ section.first h1 span {
 
 section.first button span {
     font-weight: 600;
-    font-size:1.25rem;
     background: linear-gradient(270deg, #005799 0%, #001D33 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -71,6 +70,7 @@ section.first button {
     margin-top:1.5rem;
     box-shadow: 0px 5px 0px #00213A;
     background: #FFFFFF;
+    font-size:1.25rem;
 }
 
 section.first button:hover {

@@ -14,7 +14,9 @@ export default function Inicio () {
                 >
                     <div className="headline">
                         <h1>Priorizamos a <span>excelência</span> em cada um de nossos empreendimentos.</h1>
-                        <a href="#contato"><button><span>Entrar em contato</span></button></a>
+                        <a href="#contato">
+                            <button><span>Entrar em contato</span></button>
+                        </a>
                     </div>
                 </motion.div>
             </section>
