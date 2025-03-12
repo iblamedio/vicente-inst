@@ -56,7 +56,7 @@ export default function Empreendimentos() {
               </motion.div>
             </a>
 
-            <a href="/empreendimentos/pre-lancamentos">
+            {/* <a href="/empreendimentos/pre-lancamentos">
               <motion.div                     
                 transition={{ duration: 0.2, delay:0.4 }} 
                 initial={{x:200}} 
@@ -74,7 +74,7 @@ export default function Empreendimentos() {
                 </div>
                 <Image src={placeholder} alt="Pré Lançamentos" fill className="emp-image"/>
               </motion.div>
-            </a>
+            </a> */}
           </div>
 
         </section>

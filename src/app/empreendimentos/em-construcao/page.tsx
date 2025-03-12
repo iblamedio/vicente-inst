@@ -8,6 +8,8 @@ import arunaLogo from '../../../../public/assets/aruna-logo.svg';
 import vicenteFoto from '../../../../public/assets/vicente.webp';
 import vicenteLogo from '../../../../public/assets/vicente-logo.png';
 
+import placeholder from '../../../../public/assets/placeholder-building.webp';
+
 import seloVendido from '../../../../public/assets/selo-vendido.svg';
 
 export default function EmConstrucao() {
@@ -21,7 +23,7 @@ export default function EmConstrucao() {
                     <div className="cat-legend">
                         <div className="cat-text">
                             <h4>Aruna Tower</h4>
-                            <span>50% concluído</span>
+                            <span>30% concluído</span>
                         </div>
                         <Image src={arunaLogo} alt="Aruna Tower" width={55} height={55}/>
                     </div>
@@ -38,6 +40,17 @@ export default function EmConstrucao() {
                         <Image src={vicenteLogo} alt="Vicente Residencial" width={55} height={55}/>
                     </div>
                 </a>
+
+                <div className="catalog-card">
+                    <Image src={placeholder} alt="Maria Eva" width={285} height={355} />
+                    <div className="cat-legend">
+                        <div className="cat-text">
+                            <h4>Maria Eva</h4>
+                            <span>Em breve</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     )

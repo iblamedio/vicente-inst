@@ -20,9 +20,9 @@ export default function EmpDropdown ({ mobile }: Props) {
                 <a href="/empreendimentos/entregues">
                     <span className='hover-underline-animation'>Entregues</span>
                 </a>
-                <a href="/empreendimentos/pre-lancamentos">
+                {/* <a href="/empreendimentos/pre-lancamentos">
                     <span className='hover-underline-animation'>Pré Lançamentos</span>
-                </a>
+                </a> */}
             </motion.div>
         )
     } else {
@@ -34,9 +34,9 @@ export default function EmpDropdown ({ mobile }: Props) {
                 <a href="">
                     <span className='hover-underline-animation'>Entregues</span>
                 </a>
-                <a href="">
+                {/* <a href="">
                     <span className='hover-underline-animation'>Pré Lançamentos</span>
-                </a>
+                </a> */}
             </div>
         )
     }

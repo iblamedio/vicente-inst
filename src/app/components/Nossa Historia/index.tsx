@@ -10,17 +10,11 @@ export default function NossaHistoria () {
           <div className="text-content">
             <h1>Nossa História</h1>
             <p>
-              A <span>AVicente Empreendimentos</span> nasceu do sonho e da determinação de 
-              <span> Alencar Maurício Vicente</span>, que desde muito jovem superou 
-              os mais diversos desafios, tudo com o objetivo de transformar sua 
-              vida e construir um legado em sua história.<br/><br/>
-              
-              Natural de Indaial, Santa Catarina, Alencar 
-              mudou-se ainda criança para <span>Itapema</span>, onde trabalhou 
-              em diversas áreas, indo da venda de picolé à aprender sobre desenho 
-              e atuar em escritório de arquitetura. Sempre em busca de conhecimento 
-              e oportunidades, Alencar entra para o dia a dia do mercado imobiliário 
-              e aqui encontra sua paixão. <span>Em 2019, nasce a AVicente Empreendimentos.</span>
+              A <span>AVicente Empreendimentos</span> nasceu do sonho de <span>Alencar Maurício Vicente</span>,
+              que desde jovem superou desafios para transformar sua vida e deixar um legado.
+              <br/><br/>
+              Natural de Indaial (SC), mudou-se para Itapema, onde trabalhou em diversas
+              áreas até encontrar sua paixão no mercado imobiliário. <span>Em 2019, fundou a AVicente Empreendimentos.</span>
             </p>
           </div>
         </div>

@@ -34,7 +34,6 @@ section.first div.headline {
     display:flex;
     flex-direction:column;
     align-items:start;
-    margin-top:-300px;
 }
 
 section.first h1 {
