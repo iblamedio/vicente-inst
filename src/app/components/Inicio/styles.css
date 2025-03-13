@@ -24,7 +24,7 @@ div.first-bg {
     height:100%;
     grid-area:1/1;
     z-index:1;
-    background-image: url("/assets/itapema-bg.webp");
+    background-image: url("/assets/itapema-bg.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-blend-mode: normal;
