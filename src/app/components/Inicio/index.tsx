@@ -1,5 +1,8 @@
+import Image from "next/image";
 import "./styles.css";
 import { motion } from 'motion/react';
+
+import downGif from '../../../../public/assets/down.gif';
 
 export default function Inicio () {
     return (
@@ -20,6 +23,9 @@ export default function Inicio () {
                     </div>
                 </motion.div>
             </section>
+            <div className="gif-container">
+                <Image src={downGif} alt="Role para baixo para mais informações" width={80} height={80} unoptimized/>
+            </div>
             <div className="first-bg"/>
         </div>
     )

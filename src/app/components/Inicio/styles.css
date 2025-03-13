@@ -3,10 +3,10 @@ div.first-container {
 }
 
 section.first {
-    height:90vh;
+    height:100vh;
     grid-area:1/1;
     z-index:3;
-    background: linear-gradient(90deg, rgba(0, 33, 58, 0.5) 0%, rgba(0, 33, 58, 0.275) 100%);
+    background: linear-gradient(90deg, rgba(0, 33, 58, 0.35) 0%, rgba(0, 33, 58, 0) 100%);
 }
 
 section.first div.content {
@@ -24,7 +24,7 @@ div.first-bg {
     height:100%;
     grid-area:1/1;
     z-index:1;
-    background-image: url("/assets/mole 2.jpg");
+    background-image: url("/assets/itapema-bg.webp");
     background-size:cover;
     background-repeat: no-repeat;
     background-blend-mode: normal;
@@ -41,7 +41,7 @@ section.first h1 {
     line-height: 1.4em;
     max-width:30ch;
     text-align:left;
-    font-size:2rem;
+    font-size:1.25rem;
     font-weight:400;
     color:#fff;
 }
@@ -57,6 +57,7 @@ section.first button span {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-family:'Outfit';
+    font-size:1rem;
 }
 
 section.first button {
@@ -64,15 +65,28 @@ section.first button {
     outline:none;
     border:none;
     border-radius:2rem;
-    padding:1rem 2.5rem;
+    padding:.5rem 1rem;
     transition:500ms;
-    margin-top:1.5rem;
+    margin-top:1rem;
     box-shadow: 0px 5px 0px #00213A;
     background: #FFFFFF;
-    font-size:1.25rem;
 }
 
 section.first button:hover {
     transition:200ms;
     transform:translateY(-0.25rem);
+}
+
+div.gif-container {
+    width:100%;
+    height:100%;
+    display:flex;
+    grid-area:1/1;
+    justify-content:center;
+    align-items:flex-end;
+    z-index:2;
+}
+
+div.first-container img {
+    opacity:0.075;
 }
