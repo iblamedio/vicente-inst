@@ -6,6 +6,7 @@ import linkedinLogo from '../../../../public/assets/linkedin.svg';
 import facebookLogo from '../../../../public/assets/facebook.svg';
 
 import Image from 'next/image';
+import MapComponent from '../MapComponent';
 
 export default function Footer() {
   return (
@@ -26,6 +27,9 @@ export default function Footer() {
           <div className="address">
             <span>Rua 262, 270</span>
             <span>Meia Praia - Itapema - SC</span>
+          </div>
+          <div className="map">
+            <MapComponent lat={-27.13258075286012} lng={-48.60235724628996}/>
           </div>
 
         </div>

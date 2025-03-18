@@ -1,9 +1,6 @@
 section.empreendimentos {
-    background: linear-gradient(to bottom, var(--blue), hsl(206, 100%, 20%));
-    padding:7rem 0;
     display:flex;
     flex-direction:column;
-    gap:6rem;
     align-items:center;
 }
 
@@ -11,42 +8,47 @@ section.empreendimentos h1 {
     color:#fff;
     margin:0;
     text-align:center;
-    font-size:2rem;
+    font-size:1.25rem;
+    padding:1rem 0;
+    width:100vw;
+    font-weight:400;
+    background: linear-gradient(to bottom, var(--blue), hsl(206, 100%, 15%));
 }
 
 section.empreendimentos div.empreendimentos-content {
     width:100%;
     display:flex;
     justify-content:center;
-    gap:1rem;
     flex-wrap:wrap;
     align-content:center;
 }
 
-section.empreendimentos div.empreendimentos-content div.emp-card:nth-child(even) {
+/* section.empreendimentos div.empreendimentos-content div.emp-card:nth-child(even) {
     height:580px;
     width:500px;
+} */
+
+section.empreendimentos {
+    min-height:0;
+}
+
+section.empreendimentos a {
+    flex:1;
 }
 
 section.empreendimentos div.emp-card {
     position:relative;
     transition:200ms;
     display:grid;
-    border-bottom:5px solid hsl(206, 100%, 30%);
     cursor: pointer;
-    width:450px;
-    height:540px;
-}
-
-section.empreendimentos div.emp-card:hover {
-    transition:200ms;
-    scale:1.05;
+    flex:1;
+    aspect-ratio:1/1;
 }
 
 section.empreendimentos div.emp-overlay {
     grid-area:1/1;
     z-index:10;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
     width:100%;
     height:100%;
     display:flex;
@@ -70,6 +72,8 @@ section.empreendimentos div.emp-open-icon {
 section.empreendimentos  h2 {
     margin:0;
     color:#fff;
+    font-size:1.25rem;
+    font-weight: 400;
 }
 
 section.empreendimentos .emp-card:hover .emp-image {

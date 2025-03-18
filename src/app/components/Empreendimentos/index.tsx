@@ -1,5 +1,4 @@
 import './styles.css';
-import './mobile.css';
 
 import Image from 'next/image';
 import { motion } from 'motion/react';
@@ -46,7 +45,7 @@ export default function Empreendimentos() {
               >
                 <div className="emp-overlay">
                   <div className="emp-overlay-text">
-                    <h2>Em <br/>Construção</h2>
+                    <h2>Em Construção</h2>
                     <div className="emp-open-icon">
                       <Image src={open} alt="Abrir" fill/>
                     </div>

@@ -1,11 +1,10 @@
-@media (max-width:1380px) {
+/* @media (max-width:1380px) {
     section.fourth .map {
         width:100vw;
         height:500px;
     }
     section.fourth .form {
-        padding:4.5rem 10vw;
-        width:100%;
+        /* width:100%;
         min-width: 250px;
     }
 }
@@ -17,4 +16,4 @@
     section.fourth .text p {
         font-size:1rem;
     }
-}
+} */

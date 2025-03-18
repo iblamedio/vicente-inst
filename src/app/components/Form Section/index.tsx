@@ -7,6 +7,11 @@ import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 import MapComponent from '~/app/components/MapComponent';
 
+import aruna from '../../../../public/assets/aruna-fachada.webp';
+import vicente from '../../../../public/assets/vicente.webp';
+import mariaDolores from '../../../../public/assets/mariadolores.webp';
+import Image from 'next/image';
+
 export default function FormSection() {
 
   const envServiceId: string = process.env.EMAILJS_SERVICE_ID ?? '';
@@ -93,6 +98,12 @@ export default function FormSection() {
 
   return (
     <section id="contato" className="fourth">
+      <div className="fourth-images">
+        <Image src={aruna} alt="Aruna" />
+        <Image src={vicente} alt="Vicente" />
+        <Image src={mariaDolores} alt="Maria Dolores" />
+        {/* <Image src={mariaDolores} alt="Maria Dolores" width={290} height={290}/> */}
+      </div>
       <div className="form">
         <div className="text">
           <h1 className="noselect">Nos envie uma mensagem</h1>
@@ -166,10 +177,10 @@ export default function FormSection() {
         </form>
 
       </div>
-      <div className="map">
+      {/* <div className="map">
         <MapComponent lat={-27.13258075286012} lng={-48.60235724628996}/>
         
-      </div>
+      </div> */}
 
     </section>
   )

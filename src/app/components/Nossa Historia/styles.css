@@ -41,6 +41,7 @@ section.second .text-content h1 {
     border-bottom: solid 1px #fff;
     font-size: 1.25rem;
     max-width: 300px;
+    font-weight:400;
 }
 
 section.second p {
@@ -52,7 +53,7 @@ section.second p {
 
 section.second p span {
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 400;
     color:#fff;
 }
 
@@ -89,4 +90,5 @@ section.second .img {
     width: 290px;
     height: 280px;
     box-shadow: -24px -1.75rem 0px hsl(0, 0%, 52%);
+    /* align-self:center; */
 }
